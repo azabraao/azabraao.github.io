@@ -1,0 +1,43 @@
+.is-1rem-padding{
+    padding: 1rem;
+}
+.is-2rem-padding{
+    padding: 2rem;
+}
+.is-3rem-padding{
+    padding: 3rem;
+}
+.is-4rem-padding{
+    padding: 4rem;
+}
+.is-5rem-padding{
+    padding: 5rem;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.left-presentation{
+    padding: 2rem 3rem 3.75rem 3rem;
+}
+@media(min-width:769px){
+    .left-presentation{
+        position: fixed;
+        top:0;
+        left: 0;
+        height: 100vh;
+        border-right: 1px solid #ccc;
+        z-index: 1000;
+        padding: 2rem 2rem 3.75rem 2rem;
+    }
+}
+@media(min-width:1024px){
+    .left-presentation{
+        padding: 2rem 1rem 3.75rem 1rem;
+    }
+}
+.is-vertical{
+    flex-direction: column;
+}
