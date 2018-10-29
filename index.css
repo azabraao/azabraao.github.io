@@ -1,3 +1,9 @@
+h1,h2,h3{
+    font-family: "Montserrat", sans-serif;
+}
+p{
+    font-family: "Hind", "sans-serif";
+}
 .is-1rem-padding{
     padding: 1rem;
 }
