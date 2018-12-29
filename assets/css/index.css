@@ -27,8 +27,7 @@ p, span, a{
     justify-content: center;
     align-items: center;
 }
-.site-header__wrap {
-}
+
 .site-header__photo-wrapper {
     display: flex;
     justify-content: center;
@@ -43,13 +42,8 @@ p, span, a{
 .site-header__presentation-title {
     text-align: center;
 }
-.site-header__presentation-subtitle {
-}
-
 /* Portifolio */
-.portifolio {
 
-}
 .portifolio__items {
     display: flex;
     align-items: start;
@@ -82,17 +76,11 @@ p, span, a{
     box-shadow: -.1px 2px 9px -2px var(--grey--dark);
     cursor: pointer;
 }
-.portifolio__item-container {
-
-}
 .portifolio__item-header {
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.portifolio__item-img {
-
 }
 .portifolio__item-img img {
     max-width: 100%;
@@ -103,9 +91,7 @@ p, span, a{
 }
 
 /*  About */
-.about {
-    
-}
+
 @media (min-width: 768px) {
     .about__content {
         padding: 0em 3em;
@@ -130,9 +116,6 @@ p, span, a{
 }
 
 /* Habilities */
-.habilities {
-
-}
 .habilities__wrap {
     display: flex;
     justify-content: center;
@@ -142,12 +125,6 @@ p, span, a{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 1em;
-}
-.habilities__list-item {
-
-}
-.habilities__list-item-header {
-
 }
 .habilities__list-item-percentage {
     display: block;
@@ -165,10 +142,6 @@ p, span, a{
     background: var(--blue);
 }
 /* Testimonials */
-.testimonials {
-
-}
-
 @media (min-width: 768px) {
     .testimonials__wrap {
         padding: 0em 3em;
@@ -189,15 +162,8 @@ p, span, a{
     font-size: 1.2em;
     margin-bottom: 1em;
 }
-.testimonials__item-quote {
-}
-.testimonials__quoted {
-}
 
 /* Contact */
-.contact {
-
-}
 .contact__wrap {
     display: flex;
     justify-content: center;
@@ -235,9 +201,7 @@ p, span, a{
     display: inline-block;
     margin-bottom: 1em;
 }
-.site-footer__username {
 
-}
 /* Section */
 .section {
     padding: 4em 0em;
