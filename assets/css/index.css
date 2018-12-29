@@ -107,6 +107,7 @@ p, span, a{
 }
 
 .about__content h3 {
+    text-align: center;
     margin: 1.4em 0em .3em 0em;
     font-size: 1.5em;
 }
