@@ -351,10 +351,32 @@ p, span, a{
 }
 .is-animated-cloud-mode {
     position: relative;
-    animation-name: cloud-mode;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;    
+    -webkit-animation-name: cloud-mode;
+            animation-name: cloud-mode;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;    
+}
+
+@-webkit-keyframes cloud-mode {
+    0% {
+        bottom: 0px;
+    }
+    25% {
+        bottom: 3px;
+    }
+    50% {
+        bottom: 5px;
+    }
+    75% {
+        bottom: 3px;
+    }
+    100% {
+        bottom: 0px;
+    }
 }
 
 @keyframes cloud-mode {
