@@ -17,6 +17,7 @@ p, span, a{
 }
 /* Site Header */
 .site-header {
+    background: -webkit-linear-gradient(top,var(--blue), white);
     background: linear-gradient(180deg,var(--blue), white);
     height: 95vh;
     display: -webkit-box;
