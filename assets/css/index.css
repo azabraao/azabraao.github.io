@@ -18,7 +18,7 @@ p, span, a{
 /* Site Header */
 .site-header {
     background: var(--blue,#15b3de);
-    height: 95vh;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
