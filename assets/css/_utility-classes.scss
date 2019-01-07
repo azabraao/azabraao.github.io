@@ -1,0 +1,34 @@
+@import 'variables';
+@import 'animations';
+
+.is-bg-blue {
+    background: $blue;
+}
+.is-color-grey--dark {
+    color: $grey-dark;
+}
+.is-color-white {
+    color: #fff;
+}
+.is-color-blue {
+    color: $blue;
+}
+.is-italic {
+    font-style: italic;
+}
+.is-underline {
+    text-decoration: underline;
+}
+.is-uppercase {
+    text-transform: uppercase;
+}
+.is-bold {
+    font-weight: bold;
+}
+.is-animated-cloud-mode {
+    position: relative;
+    @include animation-name(cloud-mode);
+    @include animation-duration(2s);
+    @include animation-iteration(infinite);
+    @include animation-timing-function(linear);
+}

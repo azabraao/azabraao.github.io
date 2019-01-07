@@ -1,0 +1,75 @@
+// animations
+@mixin animation-name($name) {
+    -webkit-animation-name: $name;
+    animation-name: $name;
+}
+@mixin animation-duration($duration) {
+    -webkit-animation-duration: $duration;
+            animation-duration: $duration;
+}
+@mixin animation-iteration($iteration) {
+    -webkit-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+}
+@mixin animation-timing-function($timing) {
+    -webkit-animation-timing-function: $timing;
+            animation-timing-function: $timing;
+}
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} { 
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }    
+    @keyframes #{$name} { 
+        @content;
+    }
+}
+@mixin align-items($align) {
+    -webkit-box-align: $align;
+        -ms-flex-align: $align;
+            align-items: $align;
+}
+@mixin justify-content($justify) {
+    -webkit-box-pack: $justify;
+        -ms-flex-pack: $justify;
+            justify-content: $justify;    
+}
+@mixin flex-wrap($wrap) {
+    -ms-flex-wrap: $wrap;
+        flex-wrap: $wrap;
+}
+@mixin flex-direction($direction) {
+    -webkit-box-orient: $direction;
+    -webkit-box-direction: $direction;
+        -ms-flex-direction: $direction;
+            flex-direction: $direction;
+}
+
+@mixin display($display) {
+    @if $display == flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    } @else if $display == grid {
+        display: -ms-grid;
+        display: grid;
+    } @else if $display == inline {
+        display: inline;
+    } @else if $display == inline-block {
+        display: inline-block;
+    } @else if $display == block {
+        display: block;
+    } @else if $display == none {
+        display: none;
+    }
+}
+
+@mixin box-shadow($content) {
+    -webkit-box-shadow: $content;
+            box-shadow: $content;    
+}
