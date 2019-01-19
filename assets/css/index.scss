@@ -11,18 +11,22 @@
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
+
     .site-header__content {
         @include align-items(center);
     }
+    
     .site-header__content,
     .site-header__photo-wrapper {
         @include display(flex);
         @include justify-content(center);
     }
+    
     .site-header__photo-wrapper picture img{
         max-width: 200px;
         border-radius: 50%;
     }
+    
     .site-header__presentation,
     .site-header__presentation-title {
         text-align: center;
@@ -39,16 +43,19 @@
         @include display(flex);
         @include flex-direction(column);
     }
+    
     @media (max-width: 1024px) {
         .portifolio__column:nth-child(3) {
             @include flex-direction(row);
         }
     }
+    
     @media (max-width: 615px) {
         .portifolio__column:nth-child(3) {
             @include flex-direction(column);
         }
     }
+    
     .portifolio__item {
         @include display(flex);
         @include justify-content(center);
@@ -61,15 +68,18 @@
         padding: 2.7em;
         border-radius: 10px;
     }
+    
     .portifolio__item-header {
         @include display(flex);
         @include justify-content(center);
         @include align-items(center);
         height: 200px;
     }
+    
     .portifolio__item-img img {
         max-width: 100%;
     }
+    
     .portifolio__item-description {
         @include display(none);
         margin-top: 2em;
@@ -77,20 +87,24 @@
 }
 
 .about {
+    
     .about__content h3 {
         text-align: center;
         margin: 1.4em 0em .3em 0em;
         font-size: 1.5em;
     }
+    
     .about__content p {
         font-size: 1.2em;
         margin-bottom: 1em;
     }
+    
     @media (min-width: 768px) {
         .about__content {
             padding: 0em 3em;
         }
     }
+    
     @media (min-width: 1024px) {
         .about__content {
             position: relative;
@@ -102,10 +116,12 @@
 }
 
 .habilities {
+    
     .habilities__wrap {
         @include display(flex);
         @include justify-content(center);
     }
+    
     .habilities__list {
         @include display(grid);
         @include align-items(end);
@@ -114,6 +130,7 @@
         -ms-grid-columns: (auto)[3];
             grid-template-columns: repeat(3,auto);
     }
+    
     @media (max-width: 500px) {
         .habilities__list {
             @include justify-content(center);
@@ -122,10 +139,12 @@
                 grid-template-columns: repeat(2,auto);
         }
     }
+    
     .habilities__list-item-header {
         @include display(block);
         margin-bottom: 3px;
     }
+    
     .habilities__list-item-percentage {
         @include display(block);
         height: 7px;
@@ -133,6 +152,7 @@
         width: 50px;
         position: relative;
     }
+    
     .habilities__list-item-percentage:before {
         content: " ";
         position: absolute;
@@ -144,11 +164,13 @@
 }
 
 .testimonials {
+    
     @media (min-width: 768px) {
         .testimonials__wrap {
             padding: 0em 3em;
         }
     }
+    
     @media (min-width: 1024px) {
         .testimonials__wrap {
             position: relative;
@@ -157,9 +179,11 @@
             margin-right: auto;
         }
     }
+    
     .testimonials__item {
         margin-bottom: 2em;
     }
+    
     .testimonials__item p{
         font-size: 1.2em;
         margin-bottom: 1em;
@@ -167,24 +191,29 @@
 }
 
 .contact {
+    
     .contact__wrap {
         @include display(flex);
         @include justify-content(center);
         @include align-items(center);
     }
+    
     .contact__content {
         padding: 0em 1em;
         text-align: center;
         max-width: 350px;
     }
+    
     .contact__content p {
         margin-bottom: 2em;
     }    
+    
     .contact__links {
         @include display(flex);
         @include justify-content(space-around);
         padding: .8em;
     }
+    
     .contact__link {
         border: 1px solid $grey-dark;
         border-radius: 48%;

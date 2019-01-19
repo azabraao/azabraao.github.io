@@ -5,6 +5,7 @@ h4,
 .section__title {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
+
 p, span, a{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
@@ -15,18 +16,22 @@ p, span, a{
     .section__header {
         text-align: center;
     }
+
     .section__title {
         margin-bottom: 1em;
     }
 }
+
 .container {
     padding: 0em 1.6em;
 }
+
 @media (min-width: 768px) {
     .container {
         padding: 0em 3em;
     }   
 }
+
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
