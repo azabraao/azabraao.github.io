@@ -1,0 +1,34 @@
+.header {
+  background-color: $primary;
+  color: $secondary;
+  height: 50vh;
+  
+  .container,
+  .header__inner {
+    height: 100%;
+  }
+
+  .header__inner {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+
+    .header__content {
+      line-height: 2.3125rem;
+
+      .header__presentation {
+        font-size: 1rem;
+      }
+
+      .header__title {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .header__subtitle {
+        font-size: 1.39375rem;        
+      }
+    }
+  }
+}

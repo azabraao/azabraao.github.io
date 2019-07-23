@@ -8,7 +8,7 @@ let rename = require("gulp-rename");
 sass.compiler = require('node-sass');
  
 gulp.task('sass', async () => {
-    gulp.src('./assets/scss/**/*.scss')
+    gulp.src('./assets/scss/index.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./assets/css'));
 });

@@ -1,5 +1,11 @@
-@import 'minireset';
-@import 'variables';
-@import 'base';
-@import 'header';
-@import 'footer';
+/*!
+  SCSS/CSS file for azabraao portifolio
+  Syntax: BEM
+  Created by: Abraão Azevedo (@azabraao)
+  Date: 23/07/2019 
+*/
+
+@import '_variables/all';
+@import 'base/all';
+@import 'layout/all';
+@import 'components/all'; 
