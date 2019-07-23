@@ -86,7 +86,7 @@ td, th {
     justify-content: center; }
     .footer .footer__inner .footer__links {
       width: 100%;
-      max-width: 20rem; }
+      max-width: 18rem; }
       .footer .footer__inner .footer__links .footer__links-row {
         display: -webkit-box;
         display: -moz-box;
@@ -142,8 +142,8 @@ td, th {
       .header .header__inner .header__content .header__presentation {
         font-size: 1rem; }
       .header .header__inner .header__content .header__title {
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-transform: uppercase;
         font-weight: bold; }
       .header .header__inner .header__content .header__subtitle {
-        font-size: 1.39375rem; }
+        font-size: 1.18rem; }
