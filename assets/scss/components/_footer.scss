@@ -47,6 +47,23 @@
         .footer__link:nth-child(4) {
           animation: rising 1.9s forwards;
         }
+        .footer__link {
+          img {
+            transition: all .6s  ease;
+          }
+        }
+
+        .footer__link:hover {
+          img {
+            transform: translateY(-3px);
+          }
+        }
+
+        .footer__link:active {
+           img {
+             transform: scale(0.989);
+           }
+        }
       }
     }
   }

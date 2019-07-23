@@ -130,6 +130,12 @@ td, th {
           animation: rising 1.6s forwards; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link:nth-child(4) {
           animation: rising 1.9s forwards; }
+        .footer .footer__inner .footer__links .footer__links-row .footer__link img {
+          transition: all .6s  ease; }
+        .footer .footer__inner .footer__links .footer__links-row .footer__link:hover img {
+          transform: translateY(-3px); }
+        .footer .footer__inner .footer__links .footer__links-row .footer__link:active img {
+          transform: scale(0.989); }
 
 .header {
   background-color: #000;
