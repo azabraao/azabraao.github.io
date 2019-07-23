@@ -1,0 +1,30 @@
+{
+  "name": "azabraao.github.io",
+  "version": "1.0.0",
+  "description": "azabraao personal portifolio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azabraao/azabraao.github.io.git"
+  },
+  "keywords": [
+    "portifolio",
+    "front-end",
+    "azabraao"
+  ],
+  "author": "azabraao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azabraao/azabraao.github.io/issues"
+  },
+  "homepage": "https://github.com/azabraao/azabraao.github.io#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
