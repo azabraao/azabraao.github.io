@@ -3,20 +3,21 @@
   color: $secondary;
   height: 50vh;
   min-height: 16.25rem;
-
+  
   .container,
   .header__inner {
     height: 100%;
   }
-
+  
   .header__inner {
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
-
+    
     .header__content {
       line-height: 2.3125rem;
-
+      animation: rising 1s forwards;
+      
       .header__presentation {
         font-size: 1rem;
       }
