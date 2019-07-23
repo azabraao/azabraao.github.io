@@ -1,7 +1,8 @@
 .footer  {
   background-color: $secondary;
   height: 50vh;
-
+  min-height: 16.25rem;
+  
   .container,
   .footer__inner {
     height: 100%;

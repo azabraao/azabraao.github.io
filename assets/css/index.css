@@ -65,7 +65,8 @@ td, th {
 
 .footer {
   background-color: #fff;
-  height: 50vh; }
+  height: 50vh;
+  min-height: 16.25rem; }
   .footer .container,
   .footer .footer__inner {
     height: 100%; }
@@ -117,7 +118,8 @@ td, th {
 .header {
   background-color: #000;
   color: #fff;
-  height: 50vh; }
+  height: 50vh;
+  min-height: 16.25rem; }
   .header .container,
   .header .header__inner {
     height: 100%; }
