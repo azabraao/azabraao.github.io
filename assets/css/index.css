@@ -28,7 +28,12 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   margin: 0;
   padding: 0; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal; }
 
@@ -83,6 +88,18 @@ td, th {
     to {
       opacity: 1;
       padding: 7rem 0; } } }
+
+.bg-primary, .header {
+  background-color: #000000; }
+
+.bg-secondary {
+  background-color: #ffffff; }
+
+.color-primary {
+  color: #000000; }
+
+.color-secondary {
+  color: #ffffff; }
 
 .container {
   padding: 0 2rem; }
@@ -161,7 +178,6 @@ td, th {
       max-width: 24rem; } }
 
 .header {
-  background-color: #000000;
   color: #ffffff;
   padding: 5rem 0;
   min-height: 16.25rem;
