@@ -1,6 +1,6 @@
 .footer  {
   background-color: $secondary;
-  height: 50vh;
+  padding: 3rem 0;
   min-height: 16.25rem;
 
   .container,
@@ -29,25 +29,27 @@
           @include display(flex);
           @include justify-content(center);
           @include align-items(center);
+          opacity: 0;
         }
 
         .footer__link:nth-child(1) {
-          animation: rising 1s forwards;
+          animation: rising 1s forwards 1.3s;
         }
 
         .footer__link:nth-child(2) {
-          animation: rising 1.3s forwards;
+          animation: rising 1.3s forwards 1.3s;
         }
 
         .footer__link:nth-child(3) {
-         
-          animation: rising 1.6s forwards;
+          animation: rising 1.6s forwards 1.3s;
         }
 
         .footer__link:nth-child(4) {
-          animation: rising 1.9s forwards;
+          animation: rising 1.9s forwards 1.3s;
         }
+
         .footer__link {
+
           img {
             transition: all .6s  ease;
           }
@@ -64,6 +66,18 @@
              transform: scale(0.989);
            }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-small-up) {
+  .footer {
+    padding: 5rem 0;
+
+    .footer__inner {
+      .footer__links {
+        max-width: 24rem;
       }
     }
   }

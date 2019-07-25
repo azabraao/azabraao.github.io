@@ -5,15 +5,14 @@
   Created by: Abraão Azevedo (@azabraao)
   Date: 23/07/2019 
 */
-@import url("https://fonts.googleapis.com/css?family=Poppins:700|Roboto:700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins:700|Roboto:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Domine|Roboto+Pro&display=swap");
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Poppins, Roboto, Helvetica, Calibri, sans-serif; }
+  font-family: "Domine", "Source Sans Pro", Helvetica, Calibri, sans-serif; }
 
 p,
 a,
@@ -22,7 +21,7 @@ input,
 form,
 label,
 button {
-  font-family: Roboto, Helvetica, Calibri, sans-serif; }
+  font-family: "Roboto", Helvetica, Calibri, sans-serif; }
 
 /*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -68,12 +67,29 @@ td, th {
     transform: translateY(0px);
     opacity: 1; } }
 
+@keyframes header-animation {
+  from {
+    opacity: 0;
+    padding: 15rem 0; }
+  to {
+    opacity: 1;
+    padding: 5rem 0; } }
+
+@media only screen and (min-width: 30rem) {
+  @keyframes header-animation {
+    from {
+      opacity: 0.8;
+      padding: 15rem 0; }
+    to {
+      opacity: 1;
+      padding: 7rem 0; } } }
+
 .container {
   padding: 0 2rem; }
 
 .footer {
-  background-color: #fff;
-  height: 50vh;
+  background-color: #ffffff;
+  padding: 3rem 0;
   min-height: 16.25rem; }
   .footer .container,
   .footer .footer__inner {
@@ -121,15 +137,16 @@ td, th {
           -moz-align-items: center;
           -ms-align-items: center;
           -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+          opacity: 0; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link:nth-child(1) {
-          animation: rising 1s forwards; }
+          animation: rising 1s forwards 1.3s; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link:nth-child(2) {
-          animation: rising 1.3s forwards; }
+          animation: rising 1.3s forwards 1.3s; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link:nth-child(3) {
-          animation: rising 1.6s forwards; }
+          animation: rising 1.6s forwards 1.3s; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link:nth-child(4) {
-          animation: rising 1.9s forwards; }
+          animation: rising 1.9s forwards 1.3s; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link img {
           transition: all .6s  ease; }
         .footer .footer__inner .footer__links .footer__links-row .footer__link:hover img {
@@ -137,11 +154,18 @@ td, th {
         .footer .footer__inner .footer__links .footer__links-row .footer__link:active img {
           transform: scale(0.989); }
 
+@media only screen and (min-width: 30rem) {
+  .footer {
+    padding: 5rem 0; }
+    .footer .footer__inner .footer__links {
+      max-width: 24rem; } }
+
 .header {
-  background-color: #000;
-  color: #fff;
-  height: 50vh;
-  min-height: 16.25rem; }
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5rem 0;
+  min-height: 16.25rem;
+  animation: header-animation 2s; }
   .header .container,
   .header .header__inner {
     height: 100%; }
@@ -160,13 +184,32 @@ td, th {
     -ms-flex-pack: center;
     justify-content: center; }
     .header .header__inner .header__content {
-      line-height: 2.3125rem;
-      animation: rising 1s forwards; }
-      .header .header__inner .header__content .header__presentation {
-        font-size: 1rem; }
+      max-width: 16rem;
+      text-align: left; }
       .header .header__inner .header__content .header__title {
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        font-weight: bold; }
+        opacity: 0;
+        animation: rising 1s forwards;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: .8rem;
+        line-height: 2rem; }
       .header .header__inner .header__content .header__subtitle {
-        font-size: 1.18rem; }
+        animation: rising 2s forwards .1s;
+        opacity: 0;
+        font-size: 14px;
+        font-family: "Roboto", Helvetica, Calibri, sans-serif;
+        font-weight: normal;
+        line-height: 1.3rem; }
+
+@media only screen and (min-width: 30rem) {
+  .header {
+    padding: 7rem 0; }
+    .header .header__inner .header__content {
+      max-width: 22rem; }
+      .header .header__inner .header__content .header__title {
+        font-size: 32px;
+        margin-bottom: 1rem;
+        line-height: 2.5rem; }
+      .header .header__inner .header__content .header__subtitle {
+        font-size: 18px;
+        line-height: 1.6rem; } }

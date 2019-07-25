@@ -1,9 +1,10 @@
 .header {
   background-color: $primary;
   color: $secondary;
-  height: 50vh;
+  padding: 5rem 0;
   min-height: 16.25rem;
-  
+  animation: header-animation 2s ;
+
   .container,
   .header__inner {
     height: 100%;
@@ -15,21 +16,49 @@
     @include justify-content(center);
     
     .header__content {
-      line-height: 2.3125rem;
-      animation: rising 1s forwards;
+      max-width: 16rem;
+      text-align: left;
       
-      .header__presentation {
-        font-size: 1rem;
-      }
-
       .header__title {
-        font-size: 1.7rem;
-        text-transform: uppercase;
+        opacity: 0;
+        animation: rising 1s forwards;
+        font-size: 24px;
         font-weight: bold;
+        margin-bottom: .8rem;
+        line-height: 2rem;
       }
-
+      
       .header__subtitle {
-        font-size: 1.18rem;        
+        animation: rising 2s forwards .1s;
+        opacity: 0;
+        font-size: 14px;
+        font-family: $font-secondary;
+        font-weight: normal;
+        line-height: 1.3rem;  
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-small-up) {
+  .header {
+    padding: 7rem 0;
+
+    .header__inner {
+      
+      .header__content {
+        max-width: 22rem;
+        
+        .header__title {
+          font-size: 32px;
+          margin-bottom: 1rem;
+          line-height: 2.5rem;
+        }
+
+        .header__subtitle {
+          font-size: 18px;
+          line-height: 1.6rem; 
+        }
       }
     }
   }
