@@ -1,5 +1,6 @@
 let header = document.querySelector('.header');
 let footer = document.querySelector('.footer');
+let chromeTab = document.querySelector("meta[name=theme-color]");
 
 let palletes = [
     {primary: '#001427', secondary: '#F4D58D'},
@@ -34,6 +35,8 @@ function randomizeTheme() {
     header.style.color = palletes[index].secondary
     footer.style.backgroundColor = palletes[index].secondary
     footer.style.color = palletes[index].primary
+    
+    chromeTab.setAttribute("content", palletes[index].primary);
 
     window.localStorage.setItem('pallete-index', index);
 }
