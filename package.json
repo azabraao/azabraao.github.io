@@ -23,8 +23,10 @@
   "homepage": "https://github.com/azabraao/azabraao.github.io#readme",
   "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-concat-js": "^0.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglifycss": "^1.1.0"
   }
 }
