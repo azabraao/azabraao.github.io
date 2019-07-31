@@ -1,5 +1,5 @@
 let header = document.querySelector('.header');
-let footer = document.querySelector('.footer');
+let contact = document.querySelector('.contact');
 let chromeTab = document.querySelector("meta[name=theme-color]");
 let palletes = [
     {primary: '#001427', secondary: '#F4D58D'},
@@ -32,8 +32,8 @@ function randomizeTheme() {
 
     header.style.backgroundColor = palletes[index].primary
     header.style.color = palletes[index].secondary
-    footer.style.backgroundColor = palletes[index].secondary
-    footer.style.color = palletes[index].primary
+    contact.style.backgroundColor = palletes[index].secondary
+    contact.style.color = palletes[index].primary
     
     chromeTab.setAttribute("content", palletes[index].primary);
 
