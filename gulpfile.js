@@ -38,7 +38,7 @@ gulp.task("build", function () {
                                  // example that is `./lib`
         }))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest("./assets/dist-js"));
+      .pipe(gulp.dest("./assets/js/dist"));
 });
 
 gulp.task('css:watch', async () => {
