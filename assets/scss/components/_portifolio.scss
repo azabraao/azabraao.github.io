@@ -30,12 +30,40 @@
       @include display(flex);
       @include justify-content(center);
       @include align-items(center);
-      
+      @include flex-direction(column);
+      position: relative;
+      overflow: hidden;
+
       .portifolio__item-img {
         max-width: 50%;
+        transition: .5s;
       }
-      .portifolio__item-title {
 
+      .portifolio__item-title {
+        font-size: 1rem;
+        position: absolute;
+        top: 18rem;
+        color: #fff;
+        font-family: $font-secondary;
+        font-weight: bold;
+        transition: .5s;
+
+        background: #000000;
+        @include display(flex);
+        @include justify-content(center);
+        @include align-items(center);
+        width: 100%;
+        height: 2rem;
+      }
+    }
+
+    .portifolio__item:hover {
+      .portifolio__item-img  {
+        transform: scale(0.9)
+      }
+
+      .portifolio__item-title {
+        top: 16rem;
       }
     }
   }
