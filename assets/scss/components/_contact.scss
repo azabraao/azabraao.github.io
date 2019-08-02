@@ -1,8 +1,8 @@
 .contact  {
   background-color: $secondary;
   padding: 3rem 0;
-  min-height: 16.25rem;
-
+  animation: grow-up 2s forwards;
+  
   .container,
   .contact__inner {
     height: 100%;

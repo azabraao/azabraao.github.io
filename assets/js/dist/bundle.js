@@ -1,5 +1,9 @@
-document.addEventListener('wheel', paralaxing );
+window.onload = function() {
+  setTimeout(() => {
+  },2000)
+}
 
+document.addEventListener('wheel', paralaxing );
 let firstSection = document.querySelector('.jsFirstSection');
 let portifolio = document.querySelector('.jsPortifolio');
 

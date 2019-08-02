@@ -16,3 +16,7 @@ label,
 button {
   font-family: $font-secondary;
 }
+
+body {
+  overflow-y: scroll;
+}

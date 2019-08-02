@@ -9,33 +9,33 @@
   }
 }
 
-@keyframes header-animation {
+@keyframes grow-up {
   from {
     opacity: 0;
-    padding: 15rem 0;
+    height: 100%;
   }
   to {
     opacity: 1;
-    padding: 5rem 0;
+    height: 50%;
   }
 }
 
 @media only screen and (min-width: $mobile-small-up) {  
-  @keyframes header-animation {
+  @keyframes grow-up {
     from {    
       opacity: 0.8;
-      padding: 15rem 0;
+      height: 100%;
     }
     to {
       opacity: 1;
-      padding: 7rem 0;
+      height: 50%;
     }
   }
 }
 
 @keyframes up-portifolio {
   from {
-    top: 695px;
+    top: 100vh;
   }
   
   to {
@@ -49,10 +49,9 @@
   }
   
   to {
-    top: 695px;
+    top: 100vh;
   }
 }
-
 
 @keyframes backward {
   from {

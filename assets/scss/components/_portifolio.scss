@@ -1,12 +1,16 @@
+
+
 .portifolio {  
   height: 100vh;
   left: 0;
   right: 0;
+  top: 100vh;
   position: absolute;
   background: #fff;
+  transition: 2s;
 
   .portifolio__header {
-    padding: 4rem 0;
+    padding: 2rem 0;
     text-align: center;
     
     h2 {
@@ -15,12 +19,76 @@
       font-family: $font-primary;
     }
   }
+
+  .portifolio__items {
+    @include display(flex);
+    @include flex-wrap(wrap);
+
+    .portifolio__item {
+      width: 100%;
+      height: 18em;
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+      
+      .portifolio__item-img {
+        max-width: 50%;
+      }
+      .portifolio__item-title {
+
+      }
+    }
+  }
+}
+
+
+@media only screen and(min-width: $mobile-small-up) {
+  .portifolio {
+    .portifolio__items {
+      .portifolio__item {
+        width: calc(100% / 2)
+      }
+    }
+  }
+}
+
+@media only screen and(min-width: $mobile-up) {
+  .portifolio {
+    .portifolio__items {
+      .portifolio__item {
+        width: calc(100% / 3)
+      }
+    }
+  }
 }
 
 .portifolio.scrolling {
-  animation: up-portifolio 2s forwards;
+  // position: fixed;
+  transition: top 1s ease-out;
+  top: 0;
 }
 
 .portifolio.unscrolling {
-  animation: down-portifolio 2s forwards;
+  transition: top 1s;
+  top: 100vh;
+}
+
+// item theming
+.portifolio__item.semparar {
+  background-color: #000000;
+}
+.portifolio__item.consul {
+  background-color: #9BCA3C;
+}
+.portifolio__item.bibleplan {
+  background-color: #6A2D56;
+}
+.portifolio__item.vogabito {
+  background-color: #F8F8F8;
+}
+.portifolio__item.fixer {
+  background-color: #FFDD57;
+}
+.portifolio__item.brasa {
+  background-color: #F8F8F8;
 }
