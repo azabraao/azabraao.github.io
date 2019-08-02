@@ -64,14 +64,17 @@ td, th {
   padding: 0;
   text-align: left; }
 
-.fade-in {
-  animation: fadeIn 1s; }
+.bg-primary, .header {
+  background-color: #000000; }
 
-.ativo {
-  animation: surgir 1s forwards; }
+.bg-secondary {
+  background-color: #ffffff; }
 
-.rising {
-  animation: rising 1s forwards; }
+.color-primary, .portifolio .portifolio__header h2 {
+  color: #000000; }
+
+.color-secondary {
+  color: #ffffff; }
 
 @keyframes rising {
   0% {
@@ -98,19 +101,29 @@ td, th {
       opacity: 1;
       padding: 7rem 0; } } }
 
-@keyframes fadeIn {
+@keyframes up-portifolio {
   from {
-    transform: translateY(10px); }
+    top: 695px; }
   to {
-    transform: translateY(0px); } }
+    top: 0; } }
 
-@keyframes surgir {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0px); } }
+@keyframes down-portifolio {
+  from {
+    top: 0; }
+  to {
+    top: 695px; } }
+
+@keyframes backward {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0.9); } }
+
+@keyframes forward {
+  from {
+    transform: scale(0.9); }
+  to {
+    transform: scale(1); } }
 
 .bg-primary, .header {
   background-color: #000000; }
@@ -118,7 +131,7 @@ td, th {
 .bg-secondary {
   background-color: #ffffff; }
 
-.color-primary {
+.color-primary, .portifolio .portifolio__header h2 {
   color: #000000; }
 
 .color-secondary {
@@ -238,6 +251,8 @@ td, th {
         font-weight: bold;
         margin-bottom: .3rem;
         line-height: 2rem; }
+        .header .header__inner .header__content .header__title .header__title-transitional {
+          font-family: "Domine", "Source Sans Pro", Helvetica, Calibri, sans-serif; }
       .header .header__inner .header__content .header__subtitle {
         animation: rising 2s forwards .1s;
         opacity: 0;
@@ -255,10 +270,35 @@ td, th {
         font-size: 32px;
         line-height: 2.5rem; }
         .header .header__inner .header__content .header__title .header__title-transitional {
-          font-family: "Domine", "Source Sans Pro", Helvetica, Calibri, sans-serif;
           height: 30px;
           display: inline-block;
           width: 100%; }
       .header .header__inner .header__content .header__subtitle {
         font-size: 18px;
         line-height: 1.6rem; } }
+
+.portifolio {
+  height: 100vh;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: #fff; }
+  .portifolio .portifolio__header {
+    padding: 4rem 0;
+    text-align: center; }
+    .portifolio .portifolio__header h2 {
+      font-size: 2rem;
+      font-family: "Domine", "Source Sans Pro", Helvetica, Calibri, sans-serif; }
+
+.portifolio.scrolling {
+  animation: up-portifolio 2s forwards; }
+
+.portifolio.unscrolling {
+  animation: down-portifolio 2s forwards; }
+
+.first-section.backward {
+  background-color: #ccc;
+  animation: backward 1s forwards; }
+
+.first-section.forward {
+  animation: forward 1s forwards; }

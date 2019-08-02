@@ -1,0 +1,26 @@
+.portifolio {  
+  height: 100vh;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: #fff;
+
+  .portifolio__header {
+    padding: 4rem 0;
+    text-align: center;
+    
+    h2 {
+      @extend .color-primary;
+      font-size: 2rem;
+      font-family: $font-primary;
+    }
+  }
+}
+
+.portifolio.scrolling {
+  animation: up-portifolio 2s forwards;
+}
+
+.portifolio.unscrolling {
+  animation: down-portifolio 2s forwards;
+}

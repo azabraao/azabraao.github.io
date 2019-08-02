@@ -26,6 +26,10 @@
         font-weight: bold;
         margin-bottom: .3rem;
         line-height: 2rem;
+        
+        .header__title-transitional {
+          font-family: $font-primary;
+        }
       }
       
       .header__subtitle {
@@ -54,7 +58,6 @@
           line-height: 2.5rem;
 
           .header__title-transitional {
-            font-family: $font-primary;
             height: 30px;
             display: inline-block;
             width: 100%;
