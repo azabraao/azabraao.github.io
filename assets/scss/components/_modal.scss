@@ -1,0 +1,190 @@
+.modal {
+  position: fixed;
+  display: none;
+  top: 100vh;
+  left: 0;
+  z-index: 1;
+  
+  .modal__header {
+    height: 40vh;
+    z-index: 0;
+    background: red;
+    
+    .modal__hero {
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+      height: 100%;
+      width: 100%;
+      
+      .modal__hero-image {
+        max-width: 260px;
+      }
+    }
+    
+    .modal__back-wrap {
+      cursor: pointer;
+      position: absolute;
+      width: 3rem;
+      top: 2rem;
+      left: 2rem;
+      height: 3rem;
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+      
+      .modal__back-icon {
+        width: 2rem;
+      }
+    }
+    
+  }
+  
+  .modal__content {
+    background: #fff;
+    z-index: 3;
+    display: block;
+    opacity: 1;
+    width: 100vw;
+    min-height: 60vh;
+    overflow-y: scroll;
+
+    .content__container {
+      width: 90%;
+      max-width: 500px;
+      padding: 3rem 0;
+      margin: 0 auto;
+      
+      p {
+        font-family: "Roboto",Helvetica,Calibri,sans-serif;
+        margin-bottom: 1.60rem;
+        font-size: 18px;
+        letter-spacing: -0.004em;
+        line-height: 1.58;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: $mobile-up) {  
+  .modal{
+    position: absolute;
+    .modal__content { 
+      overflow-y: unset;
+
+      .content__container {
+        width: 50%;
+
+        p {
+          margin-bottom: 2rem;
+          font-size: 21px;
+        }
+      }
+    }
+  }  
+}
+
+@keyframes rise-details {
+  from {
+    width: 100vw;
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    width: 100vw;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.modal.active {
+  display: block;
+  animation: upModal .5s forwards;
+}
+
+.modal.inactive {
+  display: block;
+  animation: downModal .5s forwards;
+}
+
+@keyframes upModal {
+  from {
+    top: 100vh;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes downModal {
+  from {
+    display: block;
+    top: 0;
+  }
+  to {
+    display: none;
+    top: 100vh;
+  }
+}
+
+// item theming
+.modal[data-brand=semparar] {
+  .modal__header {
+    background-color: #000000;
+    
+    .modal__back-icon {
+      fill: #fff;
+    }
+  }
+}
+
+.modal[data-brand=consul] {
+  .modal__header {
+    background-color: #9BCA3C;
+    
+    .modal__back-icon {
+      fill: #fff;
+    }
+  }
+}
+
+.modal[data-brand=bibleplan] {
+  .modal__header {
+    background-color: #6A2D56;
+    
+    .modal__back-icon {
+      fill: #fff;
+    }
+  }
+}
+
+.modal[data-brand=vogabito] {
+  .modal__header {
+    background-color: #F8F8F8;
+    
+    .modal__back-icon {
+      fill: #000;
+    }
+  }
+}
+
+.modal[data-brand=fixer] {
+  .modal__header {
+    background-color: #FFDD57;
+    
+    .modal__back-icon {
+      fill: #000;
+    }
+  }
+}
+
+.modal[data-brand=brasa] {
+  .modal__header {
+    background-color: #F8F8F8;
+    
+    .modal__back-icon {
+      fill: #7eb441;
+    }
+  }
+}

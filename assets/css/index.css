@@ -24,7 +24,8 @@ button {
   font-family: "Roboto", Helvetica, Calibri, sans-serif; }
 
 body {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 /*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -223,6 +224,9 @@ td, th {
         font-size: 18px;
         line-height: 1.6rem; } }
 
+/*! 
+Portifolio Component
+*/
 .portifolio {
   height: 100vh;
   left: 0;
@@ -250,41 +254,12 @@ td, th {
     .portifolio .portifolio__items .portifolio__item {
       width: 100%;
       height: 18em;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-direction: normal;
-      -moz-box-direction: normal;
-      -webkit-box-orient: vertical;
-      -moz-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden; }
-      .portifolio .portifolio__items .portifolio__item .portifolio__item-img {
-        max-width: 50%;
-        transition: .5s; }
-      .portifolio .portifolio__items .portifolio__item .portifolio__item-title {
-        font-size: 1rem;
-        position: absolute;
-        top: 18rem;
-        color: #fff;
-        font-family: "Roboto", Helvetica, Calibri, sans-serif;
-        font-weight: bold;
-        transition: .5s;
-        background: #000000;
+      top: 101px;
+      transition: top 1s;
+      cursor: pointer; }
+      .portifolio .portifolio__items .portifolio__item .item__header {
+        width: 100%;
+        height: 100%;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -298,20 +273,84 @@ td, th {
         -ms-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        width: 100%;
-        height: 2rem; }
-    .portifolio .portifolio__items .portifolio__item:hover .portifolio__item-img {
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        z-index: 0; }
+        .portifolio .portifolio__items .portifolio__item .item__header .item__back-icon {
+          display: none; }
+        .portifolio .portifolio__items .portifolio__item .item__header .item__img {
+          max-width: 50%;
+          transition: .5s; }
+        .portifolio .portifolio__items .portifolio__item .item__header .item__title {
+          font-size: 1rem;
+          position: absolute;
+          top: 18rem;
+          color: #fff;
+          font-family: "Roboto", Helvetica, Calibri, sans-serif;
+          font-weight: bold;
+          transition: .5s;
+          background: #000000;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 100%;
+          height: 2rem; }
+      .portifolio .portifolio__items .portifolio__item .item__description {
+        overflow-y: scroll;
+        display: none;
+        opacity: 0;
+        width: 0;
+        left: 0;
+        padding: 2rem 1rem;
+        height: 0;
+        background-color: #fff;
+        z-index: 1; }
+        .portifolio .portifolio__items .portifolio__item .item__description .description__content p {
+          font-family: "Roboto", Helvetica, Calibri, sans-serif;
+          margin-bottom: 2rem;
+          line-height: 2rem;
+          font-size: 1.4rem; }
+    .portifolio .portifolio__items .portifolio__item:hover .item__header .item__img {
       transform: scale(0.9); }
-    .portifolio .portifolio__items .portifolio__item:hover .portifolio__item-title {
+    .portifolio .portifolio__items .portifolio__item:hover .item__header .item__title {
       top: 16rem; }
 
 @media only screen and (min-width: 30rem) {
   .portifolio .portifolio__items .portifolio__item {
-    width: calc(100% / 2); } }
+    width: calc(100% / 2); }
+    .portifolio .portifolio__items .portifolio__item .item__description .description__content {
+      width: 70%;
+      max-width: 40rem;
+      padding: 2rem 0;
+      margin: 0 auto; } }
 
 @media only screen and (min-width: 48rem) {
   .portifolio .portifolio__items .portifolio__item {
-    width: calc(100% / 3); } }
+    width: calc(100% / 3); }
+    .portifolio .portifolio__items .portifolio__item .item__description {
+      overflow-y: unset; }
+      .portifolio .portifolio__items .portifolio__item .item__description .description__content {
+        width: 50%;
+        padding: 2rem 0;
+        margin: 0 auto; } }
 
 .portifolio.scrolling {
   transition: top 1s ease-out;
@@ -321,23 +360,35 @@ td, th {
   transition: top 1s;
   top: 100vh; }
 
-.portifolio__item.semparar {
+.portifolio__item.semparar .item__header {
   background-color: #000000; }
+  .portifolio__item.semparar .item__header .item__back-icon {
+    fill: #fff; }
 
-.portifolio__item.consul {
+.portifolio__item.consul .item__header {
   background-color: #9BCA3C; }
+  .portifolio__item.consul .item__header .item__back-icon {
+    fill: #fff; }
 
-.portifolio__item.bibleplan {
+.portifolio__item.bibleplan .item__header {
   background-color: #6A2D56; }
+  .portifolio__item.bibleplan .item__header .item__back-icon {
+    fill: #fff; }
 
-.portifolio__item.vogabito {
+.portifolio__item.vogabito .item__header {
   background-color: #F8F8F8; }
+  .portifolio__item.vogabito .item__header .item__back-icon {
+    fill: #000; }
 
-.portifolio__item.fixer {
+.portifolio__item.fixer .item__header {
   background-color: #FFDD57; }
+  .portifolio__item.fixer .item__header .item__back-icon {
+    fill: #000; }
 
-.portifolio__item.brasa {
+.portifolio__item.brasa .item__header {
   background-color: #F8F8F8; }
+  .portifolio__item.brasa .item__header .item__back-icon {
+    fill: #7eb441; }
 
 .first-section {
   height: 100vh; }
@@ -425,3 +476,146 @@ td, th {
     padding: 5rem 0; }
     .contact .contact__inner .contact__links {
       max-width: 24rem; } }
+
+.modal {
+  position: fixed;
+  display: none;
+  top: 100vh;
+  left: 0;
+  z-index: 1; }
+  .modal .modal__header {
+    height: 40vh;
+    z-index: 0;
+    background: red; }
+    .modal .modal__header .modal__hero {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 100%;
+      width: 100%; }
+      .modal .modal__header .modal__hero .modal__hero-image {
+        max-width: 260px; }
+    .modal .modal__header .modal__back-wrap {
+      cursor: pointer;
+      position: absolute;
+      width: 3rem;
+      top: 2rem;
+      left: 2rem;
+      height: 3rem;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .modal .modal__header .modal__back-wrap .modal__back-icon {
+        width: 2rem; }
+  .modal .modal__content {
+    background: #fff;
+    z-index: 3;
+    display: block;
+    opacity: 1;
+    width: 100vw;
+    min-height: 60vh;
+    overflow-y: scroll; }
+    .modal .modal__content .content__container {
+      width: 90%;
+      max-width: 500px;
+      padding: 3rem 0;
+      margin: 0 auto; }
+      .modal .modal__content .content__container p {
+        font-family: "Roboto",Helvetica,Calibri,sans-serif;
+        margin-bottom: 1.60rem;
+        font-size: 18px;
+        letter-spacing: -0.004em;
+        line-height: 1.58; }
+
+@media only screen and (min-width: 48rem) {
+  .modal {
+    position: absolute; }
+    .modal .modal__content {
+      overflow-y: unset; }
+      .modal .modal__content .content__container {
+        width: 50%; }
+        .modal .modal__content .content__container p {
+          margin-bottom: 2rem;
+          font-size: 21px; } }
+
+@keyframes rise-details {
+  from {
+    width: 100vw;
+    top: 100px;
+    opacity: 0; }
+  to {
+    width: 100vw;
+    top: 0px;
+    opacity: 1; } }
+
+.modal.active {
+  display: block;
+  animation: upModal .5s forwards; }
+
+.modal.inactive {
+  display: block;
+  animation: downModal .5s forwards; }
+
+@keyframes upModal {
+  from {
+    top: 100vh; }
+  to {
+    top: 0; } }
+
+@keyframes downModal {
+  from {
+    display: block;
+    top: 0; }
+  to {
+    display: none;
+    top: 100vh; } }
+
+.modal[data-brand=semparar] .modal__header {
+  background-color: #000000; }
+  .modal[data-brand=semparar] .modal__header .modal__back-icon {
+    fill: #fff; }
+
+.modal[data-brand=consul] .modal__header {
+  background-color: #9BCA3C; }
+  .modal[data-brand=consul] .modal__header .modal__back-icon {
+    fill: #fff; }
+
+.modal[data-brand=bibleplan] .modal__header {
+  background-color: #6A2D56; }
+  .modal[data-brand=bibleplan] .modal__header .modal__back-icon {
+    fill: #fff; }
+
+.modal[data-brand=vogabito] .modal__header {
+  background-color: #F8F8F8; }
+  .modal[data-brand=vogabito] .modal__header .modal__back-icon {
+    fill: #000; }
+
+.modal[data-brand=fixer] .modal__header {
+  background-color: #FFDD57; }
+  .modal[data-brand=fixer] .modal__header .modal__back-icon {
+    fill: #000; }
+
+.modal[data-brand=brasa] .modal__header {
+  background-color: #F8F8F8; }
+  .modal[data-brand=brasa] .modal__header .modal__back-icon {
+    fill: #7eb441; }

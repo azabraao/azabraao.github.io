@@ -8,16 +8,16 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
+        
         gtag('config', 'UA-144575265-1');
     </script>
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Abraão Azevedo (@azabraao)</title>
     <link rel="stylesheet" href="assets/css/index.min.css">
-
+    
     <link rel="shortcut icon" href="assets/img/favicon/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png"/>
@@ -27,7 +27,7 @@
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="theme-color" content="#000000"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <script src="./assets/js/dist/bundle-min.js" defer type="module"></script>
+    <script src="./assets/js/dist/bundle.js" defer type="module"></script>
 </head>
 
 <body>
@@ -73,32 +73,137 @@
             <h2>Portifólio</h2>
         </header>
         <div class="portifolio__items">
-            <div class="portifolio__item semparar">
-                <img src="./assets/img/logo-sem-parar-white.png" alt="" class="portifolio__item-img">
-                <h3 class="portifolio__item-title">MJML, Vtex, Sass, Javascript</h3>
+            <div class="portifolio__item jsPortifolioItem semparar" data-brand="semparar">
+                <div class="item__header">
+                    <img class="item__img" src="./assets/img/logo-sem-parar-white.png" alt="">
+                    <h3 class="item__title">MJML, Vtex, Sass, Javascript</h3>
+                </div>
+                <div class="item__description">
+                    <article class="description__content jsItemPortifolioDesc">
+                        <p>
+                            Criação de <a href="https://www.semparar.com.br/abastece/promocao" target="_blank">Landing Pages</a> 
+                            e Emails de campanhas de Marketing para o produto de  Abastecimento do Sem Parar com o uso das 
+                            tecnologias MJML (email), Vtex, Sass e Javascript Vanilla.
+                        </p>
+                        <p>
+                            Também criei um <a href="https://landing.semparar.com.br/shell/order" target="_blank">checkout</a> 
+                            para a parceria Shell + Sem Parar, em PHP.
+                        </p>
+                    </article>
+                </div>
             </div>
-            <div class="portifolio__item consul">
-                <img src="./assets/img/consul.png" alt="" class="portifolio__item-img">
-                <h3 class="portifolio__item-title">React, Vtex IO, GraphQL</h3>
+            <div class="portifolio__item jsPortifolioItem consul" data-brand="consul">
+                <div class="item__header">
+                    <img src="./assets/img/consul.png" alt="" class="item__img">
+                    <h3 class="item__title">React, Vtex IO, GraphQL</h3>
+                </div>
+                <div class="item__description">
+                    <article class="description__content jsItemPortifolioDesc">
+                        <p>
+                            A missão era recriar a página de FAQ, antes 
+                            <a href="https://consul.custhelp.com/app/faq" target="_blank">usando tecnologia Oracle</a>,  
+                            passando ela para React e Vtex IO, mantendo a mesma UI e UX.
+                        </p>
+                        <p>
+                            Quando o deploy acontecer você deve encontrar a <a href="http://consul.com.br/app/faq" target="_blank">página em VTEX IO aqui.</a>
+                        </p>
+                    </article>
+                </div>                
             </div>
-            <div class="portifolio__item bibleplan">
-                <img src="./assets/img/bibleplan.png" alt="" class="portifolio__item-img">
-                <h3 class="portifolio__item-title">React, Sass</h3>
+            <div class="portifolio__item jsPortifolioItem bibleplan" data-brand="bibleplan">
+                <div class="item__header">
+                    <img src="./assets/img/bibleplan.png" alt="" class="item__img">
+                    <h3 class="item__title">React, Sass</h3>
+                </div>
+                <div class="item__description">
+                    <article class="description__content jsItemPortifolioDesc">
+                        <p>
+                            Projeto Indie Maker, baseado em User Innovation. Um MVP está sendo 
+                            feito em React e logo logo estará no ar. 
+                        </p>
+                    </article>
+                </div>
             </div>
-            <div class="portifolio__item vogabito">
-                <img src="./assets/img/vogabito.png" alt="" class="portifolio__item-img">
-                <h3 class="portifolio__item-title">PHP, MySQL, JQuery</h3>
+            <div class="portifolio__item jsPortifolioItem vogabito" data-brand="vogabito">
+                <div class="item__header">
+                    <img src="./assets/img/vogabito.png" alt="" class="item__img">
+                    <h3 class="item__title">PHP, MySQL, JQuery</h3>
+                </div>
+                <div class="item__description">
+                    <article class="description__content jsItemPortifolioDesc">
+                        <p>
+                            Co-fundador, atuei validando hipóteses e aprimorando cada aspecto da 
+                            experiência do cliente com a empresa e o seu produto. Atuação em UX 
+                            Design, UI Design, Marketing e Desenvolvimento Web 
+                            (front e back: PHP, MySQL, Javascript).
+                        </p>
+                        <p>
+                            Veja como era o site, no 
+                            <a href="https://www.behance.net/gallery/64692659/Site-Vogabito" 
+                            target="_blank" rel="noopener noreferrer">Behance</a>. 
+                        </p>
+                    </article>
+                </div>                
             </div>
-            <div class="portifolio__item fixer">
-                <img src="./assets/img/fixer.png" alt="" class="portifolio__item-img">
-                <h3 class="portifolio__item-title">PHP, MySQL, JQuery, Bulma</h3>
+            <div class="portifolio__item jsPortifolioItem fixer" data-brand="fixer">
+                <div class="item__header">
+                    <img src="./assets/img/fixer.png" alt="" class="item__img">
+                    <h3 class="item__title">PHP, MySQL, JQuery, Bulma</h3>
+                </div>
+                <div class="item__description">
+                    <article class="description__content jsItemPortifolioDesc">
+                        <p>
+                            Projeto de atuação como Indie Maker, com atuação mais focada nas áreas de 
+                            Design, Back End, Front-End Marketing e Negócios.
+                        </p>
+                        <p>
+                            <a href="https://www.fixer.cf" target="_blank">Veja aqui</a>  
+                        </p>
+                    </article>
+                </div>
             </div>
-            <div class="portifolio__item brasa">
-                <img src="./assets/img/dist/brasa.png" alt="" class="portifolio__item-img">
-                <h3 class="portifolio__item-title">Consultoria</h3>
+            <div class="portifolio__item jsPortifolioItem brasa" data-brand="brasa">
+                <div class="item__header">
+                    <img src="./assets/img/dist/brasa.png" alt="" class="item__img">
+                    <h3 class="item__title">Consultoria</h3>
+                </div>
+                <div class="item__description">
+                    <article class="description__content jsItemPortifolioDesc">
+                        <p>
+                            Para a BRASA eu fiz uma consultoria, investigando no <a href="http://www.gobrasa.org"
+                            target="_blank" rel="noopener external">site deles</a>, pontos a se melhorar,
+                            onde no fim, lhes  
+                            <a href="https://docs.google.com/document/d/1YSDE8RRBzwzTXvMEwSvP8q-RzSp18cm4tBZAeNdexsw/edit"
+                               target="_blank">entreguei um documento</a> 
+                            com o resultado de minha análise.
+                        </p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
+    
+    <section class="modal jsPortifolioModal" data-brand="brasa">
+        <div class="modal__header">  
+            <div class="modal__back-wrap jsCloseModal">
+                <svg class="modal__back-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                <path d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
+                c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
+                L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
+                c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
+                c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
+                C492,219.198,479.172,207.418,464.344,207.418z"/>
+            </svg>
+        </div>  
+        <div class="modal__hero">
+            <img src="" alt="" class="modal__hero-image jsModalImage">
+        </div>
+    </div>
+    <div class="modal__content">
+        <article class="content__container jsModalContent"></article>
+    </div>
+</section>
 </body>
 
 </html>
