@@ -224,6 +224,14 @@ td, th {
         font-size: 18px;
         line-height: 1.6rem; } }
 
+@media only screen and (max-height: 30rem) and (orientation: landscape) {
+  .header .header__inner .header__content .header__title {
+    font-size: 21px;
+    line-height: 1.7rem; }
+  .header .header__inner .header__content .header__subtitle {
+    font-size: 14px;
+    line-height: 1rem; } }
+
 /*! 
 Portifolio Component
 */
@@ -403,6 +411,31 @@ Portifolio Component
   transform: scale(1);
   transition: 1s;
   transition-timing-function: ease; }
+
+@media only screen and (max-height: 30rem) and (orientation: landscape) {
+  .first-section {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 100vh; }
+    .first-section .header,
+    .first-section .contact {
+      width: 50vw; }
+  .first-section,
+  .header,
+  .contact {
+    height: 100vh;
+    min-height: 100vh; } }
 
 .contact {
   background-color: #ffffff;

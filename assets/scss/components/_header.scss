@@ -6,7 +6,7 @@
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
-
+  
   .container,
   .header__inner {
     height: 100%;
@@ -54,7 +54,7 @@
 @media only screen and (min-width: $mobile-small-up) {
   .header {
     padding: 7rem 0;
-
+    
     .header__inner {
       
       .header__content {
@@ -63,18 +63,30 @@
         .header__title {
           font-size: 32px;
           line-height: 2.5rem;
-
+          
           .header__title-transitional {
             display: inline-block;
             width: 100%;
           }
         }
-
+        
         .header__subtitle {
           font-size: 18px;
           line-height: 1.6rem; 
         }
       }
     }
+  }
+}
+
+
+@media only screen and (max-height: $mobile-small-up) and (orientation: landscape) {
+  .header .header__inner .header__content .header__title {
+    font-size: 21px;
+    line-height: 1.7rem;
+  }
+  .header .header__inner .header__content .header__subtitle {
+    font-size: 14px;
+    line-height: 1rem;
   }
 }
