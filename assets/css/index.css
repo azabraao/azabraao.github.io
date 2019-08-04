@@ -559,7 +559,7 @@ Portifolio Component
       -ms-flex-align: center;
       align-items: center; }
       .modal .modal__header .modal__back-wrap .modal__back-icon {
-        width: 2rem; }
+        width: 1.5rem; }
   .modal .modal__content {
     background: #fff;
     z-index: 3;
@@ -572,7 +572,8 @@ Portifolio Component
       width: 90%;
       max-width: 500px;
       padding: 3rem 0;
-      margin: 0 auto; }
+      margin: 0 auto;
+      height: 60vh; }
       .modal .modal__content .content__container p {
         font-family: "Roboto",Helvetica,Calibri,sans-serif;
         margin-bottom: 1.60rem;
@@ -581,15 +582,11 @@ Portifolio Component
         line-height: 1.58; }
 
 @media only screen and (min-width: 48rem) {
-  .modal {
-    position: absolute; }
-    .modal .modal__content {
-      overflow-y: unset; }
-      .modal .modal__content .content__container {
-        width: 50%; }
-        .modal .modal__content .content__container p {
-          margin-bottom: 2rem;
-          font-size: 21px; } }
+  .modal .modal__content .content__container {
+    width: 50%; }
+    .modal .modal__content .content__container p {
+      margin-bottom: 2rem;
+      font-size: 21px; } }
 
 @keyframes rise-details {
   from {
