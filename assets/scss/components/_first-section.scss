@@ -16,3 +16,43 @@
   transition-timing-function: ease;
   // animation: forward 1s forwards;
 }
+
+@media only screen and (max-height: $mobile-small-up) and (orientation: landscape) {
+  .first-section {
+      @include display(flex);
+      @include flex-direction(row);
+      height: 100vh;
+
+      .header,
+      .contact {
+        width: 50vw;
+      }
+  }
+
+  .first-section,
+  .header,
+  .contact {
+    height: 100vh;
+    min-height: 100vh;
+  }
+}
+
+// @media only screen and (max-height: $mobile-up) and (orientation: landscape) {
+//   .first-section {
+//       @include display(flex);
+//       @include flex-direction(row);
+//       height: 100vh;
+
+//       .header,
+//       .contact {
+//         width: 50vw;
+//       }
+//   }
+
+//   .first-section,
+//   .header,
+//   .contact {
+//     height: 100vh;
+//     min-height: 100vh;
+//   }
+// }
