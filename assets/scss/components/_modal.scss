@@ -54,6 +54,7 @@
       max-width: 500px;
       padding: 3rem 0;
       margin: 0 auto;
+      height: 60vh;
       
       p {
         font-family: "Roboto",Helvetica,Calibri,sans-serif;
@@ -69,9 +70,9 @@
 
 @media only screen and (min-width: $mobile-up) {  
   .modal{
-    position: absolute;
+    // position: absolute;
     .modal__content { 
-      overflow-y: unset;
+      // overflow-y: unset;
 
       .content__container {
         width: 50%;

@@ -36,7 +36,7 @@ function activeModal(modal) {
   modal.classList.add('active');
 
   let body = document.querySelector('body');
-  body.style.overflowY = 'hidden'
+  // body.style.overflowY = 'hidden'
 }
 
 
