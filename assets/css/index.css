@@ -559,7 +559,7 @@ Portifolio Component
       -ms-flex-align: center;
       align-items: center; }
       .modal .modal__header .modal__back-wrap .modal__back-icon {
-        width: 2rem; }
+        width: 1.5rem; }
   .modal .modal__content {
     background: #fff;
     z-index: 3;
