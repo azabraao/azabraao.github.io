@@ -10,7 +10,20 @@ portifolioItems.forEach((item) => {
 
 closeModal.addEventListener('click', hideModal );
 
+
+window.addEventListener('popstate', handleURLChange )
+
+function handleURLChange(event) {
+  let search = window.location.search;
+  let regex = /[^?^=^brand][a-z]*/;
+  if (regex.test(search)) {
+    let brand = search.match(regex);
+    console.log(brand[0])
+  }
+}
+
 function hideModal() {
+  
   let modal = document.querySelector('.jsPortifolioModal');
   
       if(modal.classList.contains('active')) {
@@ -24,7 +37,9 @@ function hideModal() {
       modal.classList.add('inactive');
 
       let body = document.querySelector('body');
-      body.style.overflowY = 'scroll'
+      body.style.overflowY = 'scroll';
+
+      addHistory(null,'Abraão Azevedo (@azabraao)', '/');
 }
 
 function activeModal(modal) {
@@ -54,6 +69,12 @@ function showModal(event) {
   modalContent.innerHTML = itemDescription;
   modalImage.src = itemImage.getAttribute('src');
   modal.dataset.brand = brand;
+
+  addHistory(null, `${brand} & Abraão`, `?brand=${brand}`);
+}
+
+function addHistory(state, title, url) {
+  window.history.pushState(state, title, url);
 }
 
 function matchPortifolioItem(array) {
