@@ -24,6 +24,8 @@ Portifolio Component
   .portifolio__items {
     @include display(flex);
     @include flex-wrap(wrap);
+    max-width: 1400px;
+    margin: 0 auto;
     
     .portifolio__item {
       width: 100%;
@@ -158,7 +160,7 @@ Portifolio Component
 // item theming
 .portifolio__item.semparar {
   .item__header {
-    background-color: #000000;
+    background-color: #EEEEEE;
     
     .item__back-icon {
       fill: #fff;
@@ -202,12 +204,12 @@ Portifolio Component
     }
   }
 }
-.portifolio__item.brasa {
+.portifolio__item.editmode {
   .item__header {
-    background-color: #F8F8F8;
+    background-color: #2D3047;
 
     .item__back-icon {
-      fill: #7eb441;
+      fill: #fff;
     }
   }
 }

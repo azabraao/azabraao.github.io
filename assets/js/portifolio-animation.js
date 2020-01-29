@@ -1,37 +1,37 @@
-document.addEventListener('wheel', paralaxing );
+document.addEventListener('wheel', handleScroll);
 let firstSection = document.querySelector('.jsFirstSection');
 let portifolio = document.querySelector('.jsPortifolio');
 let portifolioItems = document.querySelectorAll('.jsPortifolioItem');
 let closeModal = document.querySelector('.jsCloseModal');
 
 portifolioItems.forEach((item) => {
-  item.addEventListener('click', showModal );
+  item.addEventListener('click', showModal);
 })
 
-closeModal.addEventListener('click', hideModal );
+closeModal.addEventListener('click', hideModal);
 
 function hideModal() {
   let modal = document.querySelector('.jsPortifolioModal');
-  
-      if(modal.classList.contains('active')) {
-         modal.classList.remove('active');
-      }
-      
-      setTimeout(() => {
-         modal.style.display = 'none'; 
-      }, 500);
 
-      modal.classList.add('inactive');
+  if (modal.classList.contains('active')) {
+    modal.classList.remove('active');
+  }
 
-      let body = document.querySelector('body');
-      body.style.overflowY = 'scroll'
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 500);
+
+  modal.classList.add('inactive');
+
+  let body = document.querySelector('body');
+  body.style.overflowY = 'scroll'
 }
 
 function activeModal(modal) {
   modal.style.display = 'block';
 
-  if(modal.classList.contains('inactive')) {
-     modal.classList.remove('inactive');
+  if (modal.classList.contains('inactive')) {
+    modal.classList.remove('inactive');
   }
   modal.classList.add('active');
 
@@ -59,7 +59,7 @@ function showModal(event) {
 function matchPortifolioItem(array) {
   let result = array.filter((item) => {
     let findItem = !!item.classList ? item.classList.contains('jsPortifolioItem') : null;
-    if(findItem) return item
+    if (findItem) return item
   })
 
   return result[0];
@@ -69,22 +69,29 @@ function isClicked(element) {
   return element.classList.contains('clicked');
 }
 
-function paralaxing(event) {
+function handleScroll(event) {
   if (isScrollingDown(event)) {
     firstSection.classList.remove('forward');
     firstSection.classList.add('backward');
-    
+
     portifolio.classList.remove('unscrolling');
     portifolio.classList.add('scrolling');
+
+    document.body.style.overflow = "hidden";
+    portifolio.style.overflowY = "scroll";
+    
   } else {
-    firstSection.classList.remove('backward');
-    firstSection.classList.add('forward');
-   
-    portifolio.classList.remove('scrolling');
-    portifolio.classList.add('unscrolling');
+    let isOnTop = portifolio.scrollTop === 0
+    if(isOnTop) {
+      firstSection.classList.remove('backward');
+      firstSection.classList.add('forward');
+  
+      portifolio.classList.remove('scrolling');
+      portifolio.classList.add('unscrolling');
+    }
   }
 }
 
 function isScrollingDown(event) {
-  return event.deltaY === 100;  
+  return event.deltaY > 0;
 }

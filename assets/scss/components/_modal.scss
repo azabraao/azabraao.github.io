@@ -132,10 +132,10 @@
 // item theming
 .modal[data-brand=semparar] {
   .modal__header {
-    background-color: #000000;
+    background-color: #EEEEEE;
     
     .modal__back-icon {
-      fill: #fff;
+      fill: #000;
     }
   }
 }
@@ -180,12 +180,12 @@
   }
 }
 
-.modal[data-brand=brasa] {
+.modal[data-brand=editmode] {
   .modal__header {
-    background-color: #F8F8F8;
+    background-color: #2D3047;
     
     .modal__back-icon {
-      fill: #7eb441;
+      fill: #fff;
     }
   }
 }
