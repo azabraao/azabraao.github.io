@@ -1,0 +1,49 @@
+.hire-me {
+  padding: $grid-16 * 2 $grid-1;
+
+  .hire-me__inside {
+    text-align: center;
+    margin: 0 auto;
+
+    .hire-me__title {
+      font-family: $font-primary;
+      font-size: $title-1;
+
+      h2 {
+
+      }
+    }
+    .hire-me__button {
+      margin-top: $grid-8;
+
+      a {
+        display: inline-block;
+        font-family: $font-primary;
+        font-size: $content-medium;
+        color: #000;
+        padding: 20px;
+        border: 2px solid black;        
+        width: 216px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-up) {
+  .hire-me {
+  
+    .hire-me__inside {
+      max-width: 1426px;
+
+      .hire-me__title {
+        font-size: 112px;
+  
+        h2 {
+  
+        }
+      }
+    }
+  }
+}

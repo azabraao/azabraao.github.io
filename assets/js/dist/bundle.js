@@ -1,102 +1,12 @@
-document.addEventListener('wheel', handleScroll);
-let firstSection = document.querySelector('.jsFirstSection');
-let portifolio = document.querySelector('.jsPortifolio');
-let portifolioItems = document.querySelectorAll('.jsPortifolioItem');
-let closeModal = document.querySelector('.jsCloseModal');
+let primaryBackground = document.querySelectorAll('.jsPrimaryBackground');
+let secondaryBackground = document.querySelectorAll('.jsSecondaryBackground');
+let secondaryColor = document.querySelectorAll('.jsSecondaryColor');
+let primaryColor = document.querySelectorAll('.jsPrimaryColor');
+let primaryFill = document.querySelectorAll('.jsPrimaryFill');
+let secondaryFill = document.querySelectorAll('.jsSecondaryFill');
+let secondaryBorder = document.querySelectorAll('.jsSecondaryBorder');
+let primaryBorder = document.querySelectorAll('.jsPrimaryBorder');
 
-portifolioItems.forEach((item) => {
-  item.addEventListener('click', showModal);
-})
-
-closeModal.addEventListener('click', hideModal);
-
-function hideModal() {
-  let modal = document.querySelector('.jsPortifolioModal');
-
-  if (modal.classList.contains('active')) {
-    modal.classList.remove('active');
-  }
-
-  setTimeout(() => {
-    modal.style.display = 'none';
-  }, 500);
-
-  modal.classList.add('inactive');
-
-  let body = document.querySelector('body');
-  body.style.overflowY = 'scroll'
-}
-
-function activeModal(modal) {
-  modal.style.display = 'block';
-
-  if (modal.classList.contains('inactive')) {
-    modal.classList.remove('inactive');
-  }
-  modal.classList.add('active');
-
-  let body = document.querySelector('body');
-  // body.style.overflowY = 'hidden'
-}
-
-
-function showModal(event) {
-  let modal = document.querySelector('.jsPortifolioModal');
-  activeModal(modal);
-
-  let clickedItem = matchPortifolioItem(event.path);
-  let itemImage = clickedItem.querySelector('.item__img');
-  let itemDescription = clickedItem.querySelector('.jsItemPortifolioDesc').innerHTML;
-  let modalImage = document.querySelector('.jsModalImage');
-  let modalContent = document.querySelector('.jsModalContent');
-  let brand = clickedItem.dataset.brand;
-
-  modalContent.innerHTML = itemDescription;
-  modalImage.src = itemImage.getAttribute('src');
-  modal.dataset.brand = brand;
-}
-
-function matchPortifolioItem(array) {
-  let result = array.filter((item) => {
-    let findItem = !!item.classList ? item.classList.contains('jsPortifolioItem') : null;
-    if (findItem) return item
-  })
-
-  return result[0];
-}
-
-function isClicked(element) {
-  return element.classList.contains('clicked');
-}
-
-function handleScroll(event) {
-  if (isScrollingDown(event)) {
-    firstSection.classList.remove('forward');
-    firstSection.classList.add('backward');
-
-    portifolio.classList.remove('unscrolling');
-    portifolio.classList.add('scrolling');
-
-    document.body.style.overflow = "hidden";
-    portifolio.style.overflowY = "scroll";
-    
-  } else {
-    let isOnTop = portifolio.scrollTop === 0
-    if(isOnTop) {
-      firstSection.classList.remove('backward');
-      firstSection.classList.add('forward');
-  
-      portifolio.classList.remove('scrolling');
-      portifolio.classList.add('unscrolling');
-    }
-  }
-}
-
-function isScrollingDown(event) {
-  return event.deltaY > 0;
-}
-let header = document.querySelector('.header');
-let contact = document.querySelector('.contact');
 let chromeTab = document.querySelector("meta[name=theme-color]");
 let palletes = [
     {primary: '#001427', secondary: '#F4D58D'},
@@ -106,8 +16,8 @@ let palletes = [
     {primary: '#44355B', secondary: '#ECA72C'},
     {primary: '#5B7553', secondary: '#C3E8BD'},
     {primary: '#136F63', secondary: '#E0CA3C'},
-    {primary: '#E0CA3C', secondary: '#3E2F5B'},
-    {primary: '#B9D6F2', secondary: '#0353A4'},
+    {primary: '#3E2F5B', secondary: '#E0CA3C'},
+    {primary: '#0353A4', secondary: '#B9D6F2'},
     {primary: '#424242', secondary: '#FCFC62'},
 ];
 
@@ -127,10 +37,37 @@ function randomizeTheme() {
         return;
     }
 
-    header.style.backgroundColor = palletes[index].primary
-    header.style.color = palletes[index].secondary
-    contact.style.backgroundColor = palletes[index].secondary
-    contact.style.color = palletes[index].primary
+
+    primaryBackground.forEach(item => {
+        item.style.backgroundColor = palletes[index].primary
+    });
+    secondaryBackground.forEach(item => {
+        item.style.backgroundColor = palletes[index].secondary
+    });
+    primaryColor.forEach(item => {
+        item.style.color = palletes[index].primary
+    })
+    secondaryColor.forEach(item => {
+        item.style.color = palletes[index].secondary
+    })
+    secondaryFill.forEach(item => {
+        item.style.fill = palletes[index].secondary
+    })
+    primaryFill.forEach(item => {
+        item.style.fill = palletes[index].primary
+    })
+    primaryBorder.forEach(item => {
+        item.style.borderColor = palletes[index].primary
+    })
+    secondaryBorder.forEach(item => {
+        item.style.fill = palletes[index].secondary
+    })
+
+    // item.style.color = palletes[index].secondary
+    // item.style.fill = palletes[index].primary
+    
+    // item.style.backgroundColor = palletes[index].secondary
+    // item.style.fill = palletes[index].secondary
     
     chromeTab.setAttribute("content", palletes[index].primary);
 
@@ -139,6 +76,119 @@ function randomizeTheme() {
 
 function palleteIsRepeated(palleteIndex) {
     return  window.localStorage.getItem('pallete-index') == palleteIndex;
+}
+document.addEventListener('wheel', handleScroll);
+let firstSection = document.querySelector('.jsFirstSection');
+let portifolio = document.querySelector('.jsPortifolio');
+let portifolioItems = document.querySelectorAll('.jsPortifolioItem');
+let closeModal = document.querySelector('.jsCloseModal');
+
+portifolioItems.forEach((item) => {
+  item.addEventListener('click', showModal);
+})
+
+closeModal.addEventListener('click', hideModal);
+
+function hideModal() {
+  let modal = document.querySelector('.jsPortifolioModal');
+  
+  if (modal.classList.contains('active')) {
+    modal.classList.remove('active');
+  }
+  
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 500);
+  
+  modal.classList.add('inactive');
+  
+  let body = document.querySelector('body');
+  body.style.overflowY = 'scroll'
+}
+
+function activeModal(modal) {
+  modal.style.display = 'block';
+  
+  if (modal.classList.contains('inactive')) {
+    modal.classList.remove('inactive');
+  }
+  modal.classList.add('active');
+  
+  let body = document.querySelector('body');
+  // body.style.overflowY = 'hidden'
+}
+
+
+function showModal(event) {
+  let modal = document.querySelector('.jsPortifolioModal');
+  activeModal(modal);
+  
+  let clickedItem = matchPortifolioItem(event.path);
+  let itemImage = clickedItem.querySelector('.item__img');
+  let itemDescription = clickedItem.querySelector('.jsItemPortifolioDesc').innerHTML;
+  let modalImage = document.querySelector('.jsModalImage');
+  let modalContent = document.querySelector('.jsModalContent');
+  let brand = clickedItem.dataset.brand;
+  
+  modalContent.innerHTML = itemDescription;
+  modalImage.src = itemImage.getAttribute('src');
+  modal.dataset.brand = brand;
+}
+
+function matchPortifolioItem(array) {
+  let result = array.filter((item) => {
+    let findItem = !!item.classList ? item.classList.contains('jsPortifolioItem') : null;
+    if (findItem) return item
+  })
+  
+  return result[0];
+}
+
+function isClicked(element) {
+  return element.classList.contains('clicked');
+}
+
+function handleScroll(event) {
+  
+  const test = {
+    scrollIndex: 0,
+    down() {
+      test.scrollIndex = test.scrollIndex + 1;
+    },
+    up() {
+      test.scrollIndex = test.scrollIndex - 1;
+      console.log(test.scrollIndex);
+    }
+  }
+  
+  if(event.deltaY > 0) {
+    test.down();
+  } else {
+    test.up();
+  }
+  
+  
+  if (isScrollingDown(event)) {
+    firstSection.classList.remove('forward');
+    firstSection.classList.add('backward');
+    
+    portifolio.classList.remove('unscrolling');
+    portifolio.classList.add('scrolling');
+    
+  } else {
+    let isOnTop = window.scrollY === 0
+    if(isOnTop) {
+      firstSection.classList.remove('backward');
+      firstSection.classList.add('forward');
+      
+      portifolio.classList.remove('scrolling');
+      portifolio.classList.add('unscrolling');
+    }
+  }
+}
+
+function isScrollingDown(event) {
+  return event.deltaY > 0;
 }
 let titles = ['a Front-end', 'an Entrepreneur', 'a Maker','a Web Developer'];
 let transitionalTitle = document.querySelector('.jsTransitional');

@@ -1,0 +1,13 @@
+.section.backward {
+  transform: scale(0.9);
+  transition: 1s;
+  transition-timing-function: ease;
+  // animation: backward 1s forwards;
+}
+
+.section.forward {
+  transform: scale(1);
+  transition: 1s;
+  transition-timing-function: ease;
+  // animation: forward 1s forwards;
+}

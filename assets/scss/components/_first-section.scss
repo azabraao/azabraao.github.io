@@ -2,21 +2,6 @@
   height: 100vh;
 }
 
-.first-section.backward {
-  background-color: #ccc;
-  transform: scale(0.9);
-  transition: 1s;
-  transition-timing-function: ease;
-  // animation: backward 1s forwards;
-}
-
-.first-section.forward {
-  transform: scale(1);
-  transition: 1s;
-  transition-timing-function: ease;
-  // animation: forward 1s forwards;
-}
-
 @media only screen and (max-height: $mobile-small-up) and (orientation: landscape) {
   .first-section {
       @include display(flex);

@@ -9,6 +9,7 @@ Portifolio Component
   position: absolute;
   background: #fff;
   transition: 2s;
+  padding-bottom: $grid-8;
   
   .portifolio__header {
     padding: 2rem 0;
@@ -127,11 +128,14 @@ Portifolio Component
   }
 }
 
-@media only screen and(min-width: $mobile-up) {
+@media only screen and(min-width: $desktop-up) {
   .portifolio {
     .portifolio__items {
+      justify-content: center;
+
       .portifolio__item {
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 24px * 2);
+        margin: 12px;
         
         .item__description {
           overflow-y: unset;
