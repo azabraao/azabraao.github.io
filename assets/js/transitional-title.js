@@ -1,4 +1,4 @@
-let titles = ['a Front-end', 'an Entrepreneur', 'a Maker','a Web Developer'];
+let titles = [' Freelancer',' Front-end', 'n Entrepreneur', ' Maker',' Web Developer'];
 let transitionalTitle = document.querySelector('.jsTransitional');
 
 changeTitle(titles[0], 0)
