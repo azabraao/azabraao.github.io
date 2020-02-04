@@ -27,6 +27,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden; }
 
+body, html {
+  scroll-behavior: smooth; }
+
 /*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -242,8 +245,7 @@ Portifolio Component
   top: 100vh;
   position: absolute;
   background: #fff;
-  transition: 2s;
-  padding-bottom: 64px; }
+  transition: 2s; }
   .portifolio .portifolio__header {
     padding: 2rem 0;
     text-align: center; }

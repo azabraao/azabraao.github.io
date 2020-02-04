@@ -93,11 +93,13 @@ function handleScroll(event) {
     firstSection.classList.remove('forward');
     firstSection.classList.add('backward');
     
+    document.body.style.overflow = "hidden";
+    portifolio.style.overflowY = "scroll";
     portifolio.classList.remove('unscrolling');
     portifolio.classList.add('scrolling');
-    
+
   } else {
-    let isOnTop = window.scrollY === 0
+    let isOnTop = portifolio.scrollTop === 0
     if(isOnTop) {
       firstSection.classList.remove('backward');
       firstSection.classList.add('forward');
