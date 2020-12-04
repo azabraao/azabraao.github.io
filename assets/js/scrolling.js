@@ -69,7 +69,6 @@ function handleScroll(event) {
     },
     up() {
       test.scrollIndex = test.scrollIndex - 1;
-      console.log(test.scrollIndex);
     }
   }
   

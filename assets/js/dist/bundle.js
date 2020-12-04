@@ -1,3 +1,17 @@
+console.log(
+  `
+ █████╗ ███████╗ █████╗ ██████╗ ██████╗  █████╗  █████╗  ██████╗ 
+██╔══██╗╚══███╔╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔═══██╗
+███████║  ███╔╝ ███████║██████╔╝██████╔╝███████║███████║██║   ██║
+██╔══██║ ███╔╝  ██╔══██║██╔══██╗██╔══██╗██╔══██║██╔══██║██║   ██║
+██║  ██║███████╗██║  ██║██████╔╝██║  ██║██║  ██║██║  ██║╚██████╔╝
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ 
+
+So you like to see under the hood. Cool! Have a better look to the source code here:  
+
+https://github.com/azabraao/azabraao.github.io
+`
+);
 let primaryBackground = document.querySelectorAll('.jsPrimaryBackground');
 let secondaryBackground = document.querySelectorAll('.jsSecondaryBackground');
 let secondaryColor = document.querySelectorAll('.jsSecondaryColor');
@@ -148,7 +162,6 @@ function handleScroll(event) {
     },
     up() {
       test.scrollIndex = test.scrollIndex - 1;
-      console.log(test.scrollIndex);
     }
   }
   
