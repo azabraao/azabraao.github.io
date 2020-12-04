@@ -9,6 +9,7 @@ Portifolio Component
   position: absolute;
   background: #fff;
   transition: 2s;
+  padding-bottom: 24px;
   
   .portifolio__header {
     padding: 2rem 0;
@@ -161,6 +162,33 @@ Portifolio Component
 }
 
 // item theming
+.portifolio__item.compracerta {
+  .item__header {
+    background-color: #f6f6f6;
+    
+    .item__back-icon {
+      fill: #000;
+    }
+  }
+}
+.portifolio__item.google {
+  .item__header {
+    background-color: #fff;
+    
+    .item__back-icon {
+      fill: #000;
+    }
+  }
+}
+.portifolio__item.linx {
+  .item__header {
+    background-color: #411E5A;
+    
+    .item__back-icon {
+      fill: #fff;
+    }
+  }
+}
 .portifolio__item.semparar {
   .item__header {
     background-color: #EEEEEE;

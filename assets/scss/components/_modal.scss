@@ -8,7 +8,6 @@
   .modal__header {
     height: 40vh;
     z-index: 0;
-    background: red;
     
     .modal__hero {
       @include display(flex);
@@ -130,6 +129,36 @@
 }
 
 // item theming
+.modal[data-brand=compracerta] {
+  .modal__header {
+    background-color: #f6f6f6;
+    
+    .modal__back-icon {
+      fill: #000;
+    }
+  }
+}
+
+.modal[data-brand=linx] {
+  .modal__header {
+    background-color: #411E5A;
+    
+    .modal__back-icon {
+      fill: #fff;
+    }
+  }
+}
+
+.modal[data-brand=google] {
+  .modal__header {
+    background-color: #fff;
+    
+    .modal__back-icon {
+      fill: #000;
+    }
+  }
+}
+
 .modal[data-brand=semparar] {
   .modal__header {
     background-color: #EEEEEE;
