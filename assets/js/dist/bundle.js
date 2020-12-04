@@ -123,7 +123,7 @@ function showModal(event) {
   let modal = document.querySelector('.jsPortifolioModal');
   activeModal(modal);
   
-  let clickedItem = matchPortifolioItem(event.path);
+  let clickedItem = event.target;
   let itemImage = clickedItem.querySelector('.item__img');
   let itemDescription = clickedItem.querySelector('.jsItemPortifolioDesc').innerHTML;
   let modalImage = document.querySelector('.jsModalImage');
@@ -133,15 +133,6 @@ function showModal(event) {
   modalContent.innerHTML = itemDescription;
   modalImage.src = itemImage.getAttribute('src');
   modal.dataset.brand = brand;
-}
-
-function matchPortifolioItem(array) {
-  let result = array.filter((item) => {
-    let findItem = !!item.classList ? item.classList.contains('jsPortifolioItem') : null;
-    if (findItem) return item
-  })
-  
-  return result[0];
 }
 
 function isClicked(element) {
