@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/azabraao
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://azabraao.me
+  * I am azabraao (https://keybase.io/azabraao) on keybase.
+  * I have a public key ASAUfRihxZplTec4X9ctdRbetuzLrqSKjGHrP-zZ4pWJ_Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120147d18a1c59a654de7385fd72d7516deb6eccbaea48a8c61eb3fecd9e29589fc0a",
+      "host": "keybase.io",
+      "kid": "0120147d18a1c59a654de7385fd72d7516deb6eccbaea48a8c61eb3fecd9e29589fc0a",
+      "uid": "67c688e37c8f6f2b6163c3a48775e819",
+      "username": "azabraao"
+    },
+    "merkle_root": {
+      "ctime": 1612015867,
+      "hash": "7501d00780576eb85837eeaf80c9c71bf65a577591abfb31b3b367cf07224dbe11977a12e8c4ede41e1510c73f06292fd5a2e786e6efe4214d4c440d401a7848",
+      "hash_meta": "76da6dc43b636fbd7288c8836b5742a5abadd390970d2e7fd16822561bd8d40f",
+      "seqno": 18956523
+    },
+    "service": {
+      "entropy": "0T5neIZ3Rzv6JelKTs6EKcnm",
+      "hostname": "azabraao.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.0"
+  },
+  "ctime": 1612015880,
+  "expire_in": 504576000,
+  "prev": "90e75d0ce9668139b9cab879bbd5fb04a268f2bd08a66ef3ee26b14e1d91bf8d",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFH0YocWaZU3nOF/XLXUW3rbsy66kioxh6z/s2eKVifwKp3BheWxvYWTESpcCCMQgkOddDOlmgTm5yrh5u9X7BKJo8r0Ipm7z7iaxTh2Rv43EILzbEfcr7PKKqVRfU6q1l44EjUyqJ17YEhEgEK9VQLXuAgHCo3NpZ8RA3bl1RlQlkiNJbuJ/m6SOWGJM4+/N6eiTLGVGkTrH7A+ePd13vY4pkF69v9Lfp+ha9FfXK2+QzE2OA+zr9COKCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJGu0rXO8QvWebC9O+kU8yzKT6Ln91yUYHd0qh98LImEo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/azabraao
+
+==================================================================
