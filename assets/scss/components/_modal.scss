@@ -4,60 +4,58 @@
   top: 100vh;
   left: 0;
   z-index: 1;
-  
+
   .modal__header {
     height: 40vh;
     z-index: 0;
-    
+
     .modal__hero {
       @include display(flex);
       @include justify-content(center);
       @include align-items(center);
       height: 100%;
       width: 100%;
-      
+
       .modal__hero-image {
         max-width: 260px;
       }
     }
-    
-    .modal__back-wrap {
-      cursor: pointer;
-      position: absolute;
-      width: 3rem;
-      top: 2rem;
-      left: 2rem;
-      height: 3rem;
-      @include display(flex);
-      @include justify-content(center);
-      @include align-items(center);
-      
-      .modal__back-icon {
-        width: 1.5rem;
-      }
-    }
-    
   }
-  
+
+  .modal__back-wrap {
+    cursor: pointer;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 2rem;
+
+    svg {
+      margin-right: 16px;
+    }
+  }
+
   .modal__content {
     background: #fff;
     z-index: 3;
     display: block;
     opacity: 1;
     width: 100vw;
-    min-height: 60vh;
+    height: 60vh;
     overflow-y: scroll;
+    position: relative;
 
     .content__container {
       width: 90%;
       max-width: 500px;
       padding: 3rem 0;
       margin: 0 auto;
-      height: 60vh;
-      
+      min-height: 60vh;
+
       p {
-        font-family: "Roboto",Helvetica,Calibri,sans-serif;
-        margin-bottom: 1.60rem;
+        font-family: "Roboto", Helvetica, Calibri, sans-serif;
+        margin-bottom: 1.6rem;
         font-size: 18px;
         letter-spacing: -0.004em;
         line-height: 1.58;
@@ -66,11 +64,10 @@
   }
 }
 
-
-@media only screen and (min-width: $mobile-up) {  
-  .modal{
+@media only screen and (min-width: $mobile-up) {
+  .modal {
     // position: absolute;
-    .modal__content { 
+    .modal__content {
       // overflow-y: unset;
 
       .content__container {
@@ -82,7 +79,7 @@
         }
       }
     }
-  }  
+  }
 }
 
 @keyframes rise-details {
@@ -100,12 +97,12 @@
 
 .modal.active {
   display: block;
-  animation: upModal .5s forwards;
+  animation: upModal 0.5s forwards;
 }
 
 .modal.inactive {
   display: block;
-  animation: downModal .5s forwards;
+  animation: downModal 0.5s forwards;
 }
 
 @keyframes upModal {
@@ -129,90 +126,90 @@
 }
 
 // item theming
-.modal[data-brand=compracerta] {
+.modal[data-brand="compracerta"] {
   .modal__header {
     background-color: #f6f6f6;
-    
+
     .modal__back-icon {
       fill: #000;
     }
   }
 }
 
-.modal[data-brand=linx] {
+.modal[data-brand="linx"] {
   .modal__header {
-    background-color: #411E5A;
-    
+    background-color: #411e5a;
+
     .modal__back-icon {
       fill: #fff;
     }
   }
 }
 
-.modal[data-brand=google] {
+.modal[data-brand="google"] {
   .modal__header {
     background-color: #fff;
-    
+
     .modal__back-icon {
       fill: #000;
     }
   }
 }
 
-.modal[data-brand=semparar] {
+.modal[data-brand="semparar"] {
   .modal__header {
-    background-color: #EEEEEE;
-    
+    background-color: #eeeeee;
+
     .modal__back-icon {
       fill: #000;
     }
   }
 }
 
-.modal[data-brand=consul] {
+.modal[data-brand="consul"] {
   .modal__header {
-    background-color: #9BCA3C;
-    
+    background-color: #9bca3c;
+
     .modal__back-icon {
       fill: #fff;
     }
   }
 }
 
-.modal[data-brand=bibleplan] {
+.modal[data-brand="bibleplan"] {
   .modal__header {
-    background-color: #6A2D56;
-    
+    background-color: #6a2d56;
+
     .modal__back-icon {
       fill: #fff;
     }
   }
 }
 
-.modal[data-brand=vogabito] {
+.modal[data-brand="vogabito"] {
   .modal__header {
-    background-color: #F8F8F8;
-    
+    background-color: #f8f8f8;
+
     .modal__back-icon {
       fill: #000;
     }
   }
 }
 
-.modal[data-brand=fixer] {
+.modal[data-brand="fixer"] {
   .modal__header {
-    background-color: #FFDD57;
-    
+    background-color: #ffdd57;
+
     .modal__back-icon {
       fill: #000;
     }
   }
 }
 
-.modal[data-brand=editmode] {
+.modal[data-brand="editmode"] {
   .modal__header {
-    background-color: #2D3047;
-    
+    background-color: #2d3047;
+
     .modal__back-icon {
       fill: #fff;
     }
