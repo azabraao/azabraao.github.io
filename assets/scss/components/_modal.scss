@@ -98,11 +98,19 @@
 .modal.active {
   display: block;
   animation: upModal 0.5s forwards;
+
+  .modal__back-wrap {
+    opacity: 1;
+  }
 }
 
 .modal.inactive {
   display: block;
   animation: downModal 0.5s forwards;
+
+  .modal__back-wrap {
+    opacity: 0;
+  }
 }
 
 @keyframes upModal {

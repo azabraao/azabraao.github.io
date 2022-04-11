@@ -91,70 +91,70 @@ function randomizeTheme() {
 function palleteIsRepeated(palleteIndex) {
     return  window.localStorage.getItem('pallete-index') == palleteIndex;
 }
-document.addEventListener('wheel', handleScroll);
-let firstSection = document.querySelector('.jsFirstSection');
-let portifolio = document.querySelector('.jsPortifolio');
-let portifolioItems = document.querySelectorAll('.jsPortifolioItem');
-let closeModal = document.querySelector('.jsCloseModal');
+document.addEventListener("wheel", handleScroll);
+let firstSection = document.querySelector(".jsFirstSection");
+let portifolio = document.querySelector(".jsPortifolio");
+let portifolioItems = document.querySelectorAll(".jsPortifolioItem");
+let closeModal = document.querySelector(".jsCloseModal");
 
 portifolioItems.forEach((item) => {
-  item.addEventListener('click', showModal);
-})
+  item.addEventListener("click", showModal);
+});
 
-closeModal.addEventListener('click', hideModal);
+closeModal.addEventListener("click", hideModal);
 
 function hideModal() {
-  let modal = document.querySelector('.jsPortifolioModal');
-  
-  if (modal.classList.contains('active')) {
-    modal.classList.remove('active');
+  let modal = document.querySelector(".jsPortifolioModal");
+
+  if (modal.classList.contains("active")) {
+    modal.classList.remove("active");
   }
-  
+
   setTimeout(() => {
-    modal.style.display = 'none';
+    modal.style.display = "none";
   }, 500);
-  
-  modal.classList.add('inactive');
-  
-  let body = document.querySelector('body');
-  body.style.overflowY = 'scroll'
+
+  modal.classList.add("inactive");
+
+  let body = document.querySelector("body");
+  body.style.overflowY = "scroll";
 }
 
 function activeModal(modal) {
-  modal.style.display = 'block';
-  
-  if (modal.classList.contains('inactive')) {
-    modal.classList.remove('inactive');
+  modal.style.display = "block";
+
+  if (modal.classList.contains("inactive")) {
+    modal.classList.remove("inactive");
   }
-  modal.classList.add('active');
-  
-  let body = document.querySelector('body');
-  // body.style.overflowY = 'hidden'
+  modal.classList.add("active");
+
+  let body = document.querySelector("body");
+  body.style.overflowY = "hidden";
 }
 
-
 function showModal(event) {
-  let modal = document.querySelector('.jsPortifolioModal');
+  let modal = document.querySelector(".jsPortifolioModal");
   activeModal(modal);
-  
+
   let clickedItem = event.target;
-  let itemImage = clickedItem.querySelector('.item__img');
-  let itemDescription = clickedItem.querySelector('.jsItemPortifolioDesc').innerHTML;
-  let modalImage = document.querySelector('.jsModalImage');
-  let modalContent = document.querySelector('.jsModalContent');
+  let itemImage = clickedItem.querySelector(".item__img");
+  let itemDescription = clickedItem.querySelector(
+    ".jsItemPortifolioDesc"
+  ).innerHTML;
+  let modalImage = document.querySelector(".jsModalImage");
+  let modalContent = document.querySelector(".jsModalContent");
   let brand = clickedItem.dataset.brand;
-  
+
   modalContent.innerHTML = itemDescription;
-  modalImage.src = itemImage.getAttribute('src');
+  modalImage.src = itemImage.getAttribute("src");
   modal.dataset.brand = brand;
 }
 
 function isClicked(element) {
-  return element.classList.contains('clicked');
+  return element.classList.contains("clicked");
 }
 
 function handleScroll(event) {
-  
   const test = {
     scrollIndex: 0,
     down() {
@@ -162,33 +162,31 @@ function handleScroll(event) {
     },
     up() {
       test.scrollIndex = test.scrollIndex - 1;
-    }
-  }
-  
-  if(event.deltaY > 0) {
+    },
+  };
+
+  if (event.deltaY > 0) {
     test.down();
   } else {
     test.up();
   }
-  
-  
+
   if (isScrollingDown(event)) {
-    firstSection.classList.remove('forward');
-    firstSection.classList.add('backward');
-    
+    firstSection.classList.remove("forward");
+    firstSection.classList.add("backward");
+
     document.body.style.overflow = "hidden";
     portifolio.style.overflowY = "scroll";
-    portifolio.classList.remove('unscrolling');
-    portifolio.classList.add('scrolling');
-
+    portifolio.classList.remove("unscrolling");
+    portifolio.classList.add("scrolling");
   } else {
-    let isOnTop = portifolio.scrollTop === 0
-    if(isOnTop) {
-      firstSection.classList.remove('backward');
-      firstSection.classList.add('forward');
-      
-      portifolio.classList.remove('scrolling');
-      portifolio.classList.add('unscrolling');
+    let isOnTop = portifolio.scrollTop === 0;
+    if (isOnTop) {
+      firstSection.classList.remove("backward");
+      firstSection.classList.add("forward");
+
+      portifolio.classList.remove("scrolling");
+      portifolio.classList.add("unscrolling");
     }
   }
 }
@@ -196,6 +194,7 @@ function handleScroll(event) {
 function isScrollingDown(event) {
   return event.deltaY > 0;
 }
+
 let titles = [' Freelancer',' Front-end developer', 'n Entrepreneur', ' Maker',' Web Developer'];
 let transitionalTitle = document.querySelector('.jsTransitional');
 
