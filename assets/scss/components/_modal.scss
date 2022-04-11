@@ -137,89 +137,65 @@
 .modal[data-brand="compracerta"] {
   .modal__header {
     background-color: #f6f6f6;
-
-    .modal__back-icon {
-      fill: #000;
-    }
   }
 }
 
 .modal[data-brand="linx"] {
   .modal__header {
     background-color: #411e5a;
-
-    .modal__back-icon {
-      fill: #fff;
-    }
   }
 }
 
 .modal[data-brand="google"] {
   .modal__header {
     background-color: #fff;
-
-    .modal__back-icon {
-      fill: #000;
-    }
   }
 }
 
 .modal[data-brand="semparar"] {
   .modal__header {
     background-color: #eeeeee;
-
-    .modal__back-icon {
-      fill: #000;
-    }
   }
 }
 
 .modal[data-brand="consul"] {
   .modal__header {
     background-color: #9bca3c;
-
-    .modal__back-icon {
-      fill: #fff;
-    }
   }
 }
 
 .modal[data-brand="bibleplan"] {
   .modal__header {
     background-color: #6a2d56;
-
-    .modal__back-icon {
-      fill: #fff;
-    }
   }
 }
 
 .modal[data-brand="vogabito"] {
   .modal__header {
     background-color: #f8f8f8;
-
-    .modal__back-icon {
-      fill: #000;
-    }
   }
 }
 
 .modal[data-brand="fixer"] {
   .modal__header {
     background-color: #ffdd57;
-
-    .modal__back-icon {
-      fill: #000;
-    }
   }
 }
 
 .modal[data-brand="editmode"] {
   .modal__header {
     background-color: #2d3047;
+  }
+}
 
-    .modal__back-icon {
-      fill: #fff;
-    }
+.modal[data-brand="brastemp"] {
+  .modal__header {
+    background-color: #f47d31;
+  }
+}
+
+.modal[data-brand="rivian"] {
+  .modal__header {
+    background-color: #f9f2e8;
   }
 }

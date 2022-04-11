@@ -1,7 +1,7 @@
 /*! 
 Portifolio Component
 */
-.portifolio {  
+.portifolio {
   height: 100vh;
   left: 0;
   right: 0;
@@ -10,31 +10,31 @@ Portifolio Component
   background: #fff;
   transition: 2s;
   padding-bottom: 24px;
-  
+
   .portifolio__header {
     padding: 2rem 0;
     text-align: center;
-    
+
     h2 {
       @extend .color-primary;
       font-size: 2rem;
       font-family: $font-primary;
     }
   }
-  
+
   .portifolio__items {
     @include display(flex);
     @include flex-wrap(wrap);
     max-width: 1400px;
     margin: 0 auto;
-    
+
     .portifolio__item {
       width: 100%;
       height: 18em;
       top: 101px;
       transition: top 1s;
       cursor: pointer;
-      
+
       .item__header {
         width: 100%;
         height: 100%;
@@ -47,15 +47,11 @@ Portifolio Component
         z-index: 0;
         pointer-events: none;
 
-        .item__back-icon {
-          display: none;
-        }
-         
         .item__img {
           max-width: 50%;
-          transition: .5s;
+          transition: 0.5s;
         }
-        
+
         .item__title {
           font-size: 1rem;
           position: absolute;
@@ -63,8 +59,8 @@ Portifolio Component
           color: #fff;
           font-family: $font-secondary;
           font-weight: bold;
-          transition: .5s;
-          
+          transition: 0.5s;
+
           background: #000000;
           @include display(flex);
           @include justify-content(center);
@@ -73,7 +69,7 @@ Portifolio Component
           height: 2rem;
         }
       }
-      
+
       .item__description {
         overflow-y: scroll;
         display: none;
@@ -95,13 +91,13 @@ Portifolio Component
         }
       }
     }
-    
+
     .portifolio__item:hover {
       .item__header {
-        .item__img  {
-          transform: scale(0.9)
+        .item__img {
+          transform: scale(0.9);
         }
-        
+
         .item__title {
           top: 16rem;
         }
@@ -115,7 +111,7 @@ Portifolio Component
     .portifolio__items {
       .portifolio__item {
         width: calc(100% / 2);
-        
+
         .item__description {
           .description__content {
             width: 70%;
@@ -137,7 +133,7 @@ Portifolio Component
       .portifolio__item {
         width: calc(100% / 3 - 24px * 2);
         margin: 12px;
-        
+
         .item__description {
           overflow-y: unset;
 
@@ -166,82 +162,56 @@ Portifolio Component
 .portifolio__item.compracerta {
   .item__header {
     background-color: #f6f6f6;
-    
-    .item__back-icon {
-      fill: #000;
-    }
   }
 }
 .portifolio__item.google {
   .item__header {
     background-color: #fff;
-    
-    .item__back-icon {
-      fill: #000;
-    }
   }
 }
 .portifolio__item.linx {
   .item__header {
-    background-color: #411E5A;
-    
-    .item__back-icon {
-      fill: #fff;
-    }
+    background-color: #411e5a;
   }
 }
 .portifolio__item.semparar {
   .item__header {
-    background-color: #EEEEEE;
-    
-    .item__back-icon {
-      fill: #fff;
-    }
+    background-color: #eeeeee;
   }
 }
 .portifolio__item.consul {
   .item__header {
-    background-color: #9BCA3C;
-
-    .item__back-icon {
-      fill: #fff;
-    }
+    background-color: #9bca3c;
   }
 }
 .portifolio__item.bibleplan {
   .item__header {
-    background-color: #6A2D56;
-    
-    .item__back-icon {
-      fill: #fff;
-    }
+    background-color: #6a2d56;
   }
 }
 .portifolio__item.vogabito {
   .item__header {
-    background-color: #F8F8F8;
-    
-    .item__back-icon {
-      fill: #000;
-    }
+    background-color: #f8f8f8;
   }
 }
 
 .portifolio__item.fixer {
   .item__header {
-    background-color: #FFDD57;
-    
-    .item__back-icon {
-      fill: #000;
-    }
+    background-color: #ffdd57;
   }
 }
 .portifolio__item.editmode {
   .item__header {
-    background-color: #2D3047;
-
-    .item__back-icon {
-      fill: #fff;
-    }
+    background-color: #2d3047;
+  }
+}
+.portifolio__item.rivian {
+  .item__header {
+    background-color: #f9f2e8;
+  }
+}
+.portifolio__item.brastemp {
+  .item__header {
+    background-color: #f47d31;
   }
 }
