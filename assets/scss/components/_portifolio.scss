@@ -106,7 +106,7 @@ Portifolio Component
   }
 }
 
-@media only screen and(min-width: $mobile-small-up) {
+@media only screen and (min-width: $mobile-small-up) {
   .portifolio {
     .portifolio__items {
       .portifolio__item {
@@ -125,7 +125,7 @@ Portifolio Component
   }
 }
 
-@media only screen and(min-width: $desktop-up) {
+@media only screen and (min-width: $desktop-up) {
   .portifolio {
     .portifolio__items {
       justify-content: center;
