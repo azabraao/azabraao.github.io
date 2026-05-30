@@ -1,1 +1,7 @@
 /node_modules
+
+# Generated build output — rebuilt by `npm run build` and in CI on every push.
+/assets/css/index.min.css
+/assets/js/dist/
+/_site
+.DS_Store

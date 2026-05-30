@@ -2,10 +2,9 @@
   "name": "azabraao.github.io",
   "version": "1.0.0",
   "description": "azabraao personal portifolio",
-  "main": "gulpfile.js",
   "scripts": {
-    "start": "live-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.mjs",
+    "serve": "npm run build && npx --yes serve ."
   },
   "repository": {
     "type": "git",
@@ -21,20 +20,9 @@
   "bugs": {
     "url": "https://github.com/azabraao/azabraao.github.io/issues"
   },
-  "overrides": {
-    "graceful-fs": "^4.2.9"
-  },
   "homepage": "https://github.com/azabraao/azabraao.github.io#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-js": "^0.1.0",
-    "gulp-minify": "^3.1.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglifycss": "^1.1.0",
-    "node-sass": "^7.0.1",
-    "sass": "^1.50.0"
+    "esbuild": "^0.25.0",
+    "sass": "^1.80.0"
   }
 }
