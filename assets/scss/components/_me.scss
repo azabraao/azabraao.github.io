@@ -42,30 +42,6 @@
   width: 100%;
   min-height: 100vh;
   padding: 34px 20px 28px;
-  background:
-    radial-gradient(
-      circle at 50% 8%,
-      rgba(255, 86, 255, 0.34),
-      transparent 17rem
-    ),
-    radial-gradient(
-      circle at 5% 72%,
-      rgba(0, 151, 255, 0.22),
-      transparent 20rem
-    );
-}
-
-.me-panel::before {
-  content: "";
-  position: absolute;
-  inset: -34px -18px;
-  border-radius: 38px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 24px 70px rgba(5, 0, 53, 0.28);
-  opacity: 0;
-  pointer-events: none;
 }
 
 .me-profile,
@@ -278,22 +254,6 @@
     padding: 54px 52px;
     border-radius: 36px;
     backdrop-filter: blur(18px);
-    background:
-      radial-gradient(
-        circle at 50% 8%,
-        rgba(255, 86, 255, 0.32),
-        transparent 20rem
-      ),
-      radial-gradient(
-        circle at 4% 78%,
-        rgba(0, 151, 255, 0.24),
-        transparent 22rem
-      ),
-      rgba(255, 255, 255, 0.05);
-  }
-
-  .me-panel::before {
-    opacity: 1;
   }
 
   .me-profile__name {
